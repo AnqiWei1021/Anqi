@@ -1,47 +1,62 @@
+/* Global */
 body {
     margin: 0;
     padding: 0;
     font-family: "Helvetica", sans-serif;
-    background: #f4f4f6;
-}
-
-.container {
-    max-width: 800px;
-    margin: 60px auto;
-    padding: 20px;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-h1 {
-    font-size: 36px;
-    margin-bottom: 5px;
-}
-
-.cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.card {
     background: white;
-    padding: 20px;
-    border-radius: 12px;
+    color: #222;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+.navbar a {
     text-decoration: none;
-    color: black;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: 0.2s;
+    color: #333;
+    font-weight: 500;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+.navbar a:hover {
+    color: #000;
 }
 
-.card h2 {
-    margin: 0 0 10px;
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-section h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero-section h2 {
+    font-size: 20px;
+    color: #555;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* Avatar */
+.avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #ddd;
+}
+
+/* Email */
+.email {
+    font-size: 16px;
+    color: #777;
 }
