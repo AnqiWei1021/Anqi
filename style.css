@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Helvetica", sans-serif;
-    background: white;
-    color: #222;
+    background: #000000;     /* 黑色背景 */
+    color: #ffffff;          /* 白色字体 */
 }
 
 /* Navigation Bar */
@@ -13,18 +13,18 @@ body {
     justify-content: center;
     gap: 30px;
     padding: 20px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 16px;
+    border-bottom: 1px solid #333; /* 深灰分隔线 */
+    background: #000000;           /* 导航栏黑底 */
 }
 
 .navbar a {
     text-decoration: none;
-    color: #333;
+    color: #cccccc;        /* 灰白文字 */
     font-weight: 500;
 }
 
 .navbar a:hover {
-    color: #000;
+    color: #ffffff;        /* 鼠标移上变亮 */
 }
 
 /* Hero Section */
@@ -36,11 +36,12 @@ body {
 .hero-section h1 {
     font-size: 40px;
     margin-bottom: 10px;
+    color: #ffffff;
 }
 
 .hero-section h2 {
     font-size: 20px;
-    color: #555;
+    color: #bbbbbb;
     font-weight: 400;
     margin-bottom: 30px;
 }
@@ -52,11 +53,11 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 3px solid #ddd;
+    border: 3px solid #444;   /* 深灰色外圈 */
 }
 
 /* Email */
 .email {
     font-size: 16px;
-    color: #777;
+    color: #999999;
 }
