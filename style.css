@@ -1,63 +1,73 @@
-/* Global */
+/* GLOBAL */
 body {
     margin: 0;
     padding: 0;
     font-family: "Helvetica", sans-serif;
-    background: #000000;     /* 黑色背景 */
-    color: #ffffff;          /* 白色字体 */
+    background: #000;
+    color: white;
 }
 
-/* Navigation Bar */
+/* BACKGROUND IMAGE LAYER */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(45%);
+    z-index: -1;
+}
+
+/* NAVIGATION */
 .navbar {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
     padding: 20px 0;
-    border-bottom: 1px solid #333; /* 深灰分隔线 */
-    background: #000000;           /* 导航栏黑底 */
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    position: sticky;
+    top: 0;
 }
 
 .navbar a {
     text-decoration: none;
-    color: #cccccc;        /* 灰白文字 */
+    color: #e0e0e0;
     font-weight: 500;
+    transition: 0.2s;
 }
 
 .navbar a:hover {
-    color: #ffffff;        /* 鼠标移上变亮 */
+    color: white;
 }
 
-/* Hero Section */
-.hero-section {
+/* HERO CENTER AREA */
+.hero {
     text-align: center;
-    padding: 60px 20px;
+    margin-top: 120px;
 }
 
-.hero-section h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-.hero-section h2 {
-    font-size: 20px;
-    color: #bbbbbb;
-    font-weight: 400;
-    margin-bottom: 30px;
-}
-
-/* Avatar */
 .avatar {
     width: 220px;
     height: 220px;
     border-radius: 50%;
     object-fit: cover;
+    border: 4px solid rgba(255,255,255,0.7);
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
     margin-bottom: 20px;
-    border: 3px solid #444;   /* 深灰色外圈 */
 }
 
-/* Email */
-.email {
-    font-size: 16px;
-    color: #999999;
+.hero h1 {
+    font-size: 48px;
+    margin: 10px 0 0;
+}
+
+.hero h2 {
+    font-size: 20px;
+    color: #cccccc;
+    font-weight: 300;
+    margin-top: 10px;
 }
