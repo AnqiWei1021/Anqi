@@ -1,56 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anqi Wei – Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <!-- Top navigation -->
-    <header class="top-bar">
-        <div class="brand">
-            <a href="index.html">Anqi Wei</a>
+<!-- Hero section -->
+<section class="hero" id="hero">
+    <div class="hero-copy">
+        <p class="eyebrow">digital arts & humanities</p>
+        <h1>Stories told in pixels, text, and quiet interactions.</h1>
+        <p class="lede">
+            I create research-driven narratives that live online: experiments with language,
+            photography, and small interactive gestures that invite people to feel and think.
+        </p>
+        <div class="hero-actions">
+            <a class="button primary" href="papers.html">view papers</a>
+            <a class="button ghost" href="#about">about me</a>
         </div>
-        <nav class="menu">
-            <a href="index.html">home</a>
-            <a href="papers.html">paper</a>
-            <a href="groupwork.html">groupwork</a>
-            <a href="#contact">contact</a>
-        </nav>
-    </header>
+    </div>
+    <div class="hero-visual">
+        <div class="glow"></div>
+        <img src="avatar.png" alt="Portrait of Anqi">
+    </div>
+</section>
 
-    <!-- Artistic title -->
-    <section class="hero-title">
-        <p class="line">stay hungry,</p>
-        <p class="line">stay foolish.</p>
-    </section>
+<!-- About section -->
+<section class="about" id="about">
+    <div class="about-text">
+        <p class="hello">Hiiiii, everyone.</p>
+        <p>
+            I’m Anqi Wei, currently studying MA Digital Arts & Humanities at UCC. My work moves between
+            research, storytelling and digital media, exploring how technology, memory and everyday life collide.
+        </p>
+        <p>
+            I like working with text, images and small interactive moments, and I’m especially curious about how
+            people feel, respond and reshape meaning in digital spaces.
+        </p>
+        <p id="contact">
+            When I’m not studying, you’ll probably find me walking in the city, taking photos, or collecting tiny
+            fragments of stories.
+        </p>
+    </div>
+    <div class="about-highlights">
+        <div class="pill">interactive web experiments</div>
+        <div class="pill">visual storytelling</div>
+        <div class="pill">digital archives</div>
+        <div class="pill">collaborative research</div>
+    </div>
+</section>
 
-    <!-- About section -->
-    <section class="about">
-        <div class="about-photo">
-            <img src="avatar.png" alt="Portrait of Anqi">
-        </div>
-        <div class="about-text">
-            <p class="hello">Hiiiii, everyone.</p>
-            <p>
-                I’m Anqi Wei, currently studying MA Digital Arts & Humanities at UCC.
-                My work moves between research, storytelling and digital media,
-                exploring how technology, memory and everyday life collide.
-            </p>
-            <p>
-                I like working with text, images and small interactive moments,
-                and I’m especially curious about how people feel, respond and
-                reshape meaning in digital spaces.
-            </p>
-            <p id="contact">
-                When I’m not studying, you’ll probably find me walking in the city,
-                taking photos, or collecting tiny fragments of stories.
-            </p>
-        </div>
-    </section>
-
-</body>
-</html>
+<!-- Featured links -->
+<section class="features">
+    <article class="feature">
+        <div class="feature-meta">recent work</div>
+        <h3>Research papers</h3>
+        <p>Writing that connects theory, design, and lived experience. Explore reflective essays and project notes.</p>
+        <a class="text-link" href="papers.html">Read papers</a>
+    </article>
+    <article class="feature">
+        <div class="feature-meta">collaboration</div>
+        <h3>Group projects</h3>
+        <p>Co-created digital experiences that experiment with narrative, sound, and visual culture.</p>
+        <a class="text-link" href="groupwork.html">See groupwork</a>
+    </article>
+    <article class="feature">
+        <div class="feature-meta">contact</div>
+        <h3>Let’s talk</h3>
+        <p>Available for collaborations, conversations, or sharing stories about cities, memories, and media.</p>
+        <a class="text-link" href="#contact">Contact me</a>
+    </article>
+</section>
