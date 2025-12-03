@@ -1,29 +1,63 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     background: white;
+    height: 100vh;
     overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* 柔和下落动画 */
+#text-container {
+    position: absolute;
+    top: 50%;            /* 垂直中間 */
+    left: 50%;           /* 水平中間 */
+    transform: translate(-50%, -30%); /* 微微上移，美观 */
+    display: flex;
+    gap: 20px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 線條設置 */
+.line {
+    width: 1px;             /* 更細 */
+    background-color: #777; /* 柔和灰色 */
+    margin-bottom: 8px;
+    transform-origin: top;
+    animation: drop 0.9s ease-out forwards;
+}
+
+/* 字母樣式 */
+.letter {
+    font-size: 28px;
+    font-weight: 600;     /* 加粗 */
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* 線條掉落動畫 */
 @keyframes drop {
-    0% {
-        transform: translateY(-250px); /* 從更上面掉下來 */
+    from {
+        height: 0;
         opacity: 0;
     }
-    100% {
-        transform: translateY(0);
+    to {
         opacity: 1;
     }
 }
 
-/* 字母摆动动画 */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(6px); }
-}
-
-.letter {
-    margin-top: 6px;
+/* 字母淡入 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
