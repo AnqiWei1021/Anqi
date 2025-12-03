@@ -17,7 +17,7 @@ text.split("").forEach((char, index) => {
     wrapper.style.alignItems = "center";
 
     // 线条长度（150–300px）
-    const length = 150 + Math.random() * 150;
+    const length = 250 + Math.random() * 200;
 
     // ⭐ 线条超细化：0.3px
     const line = document.createElement("div");
