@@ -298,3 +298,6 @@ body {
     margin: 50px auto 30px auto; /* 上方间距 50px，下方 30px */
     width: 80%;   /* 横线宽度可调：80% 比较优雅 */
 }
+.info-section{
+    margin-top: -20px;
+}
