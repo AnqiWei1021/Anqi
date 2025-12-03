@@ -279,8 +279,14 @@ body {
 .writing-figure img {
     width: 100%;
     max-width: 900px;
-    border-radius: 6px;
+    border-radius: 6px;  
 }
+.writing-figure figcaption {
+    margin-top: 12px;   /* 图片和注释之间的距离 */
+    font-size: 14px;
+    color: #666;
+}
+
 
 .writing-figure figcaption {
     font-size: 14px;
