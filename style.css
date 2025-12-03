@@ -202,3 +202,56 @@ body {
     text-align: center;          /* 再次确保文字居中 */
     word-wrap: break-word;       /* 强制长单词换行 */
 }
+/* Writing page layout */
+.writing-container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.writing-title {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.writing-intro {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.writing-content h2 {
+    font-size: 26px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.writing-content h3 {
+    font-size: 20px;
+    margin-top: 25px;
+    font-weight: 700;
+}
+
+.writing-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.writing-content ul {
+    padding-left: 25px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.writing-content img {
+    width: 100%;
+    max-width: 750px;
+    display: block;
+    margin: 25px auto;
+    border-radius: 6px;
+}
