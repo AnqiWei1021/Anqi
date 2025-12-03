@@ -1,26 +1,31 @@
-// 你的标题
-const title = "I think therefore I am.";
+const text = "I think therefore I am.";
 
-// 竖线容器
-const linesContainer = document.querySelector(".lines");
+const container = document.getElementById("text-container");
 
-// 遍历每个字母
-title.split("").forEach(char => {
-    if (char !== " ") {
-        // 生成一条竖线
-        const line = document.createElement("div");
-        line.classList.add("line");
-
-        // 设置随机高度（变化小，保持美感）
-        const min = 60;
-        const max = 140;
-        line.style.height = (Math.random() * (max - min) + min) + "px";
-
-        linesContainer.appendChild(line);
+for (let char of text) {
+    if (char === " ") {
+        // 空格直接渲染空白，不产生线条
+        const space = document.createElement("div");
+        space.style.width = "18px";
+        container.appendChild(space);
     } else {
-        // 如果是空格，补一个占位（使字母和线条对齐）
-        const spacer = document.createElement("div");
-        spacer.style.width = "30px";
-        linesContainer.appendChild(spacer);
+        // 创建字母 + 竖线的容器
+        const block = document.createElement("div");
+        block.className = "char-block";
+
+        // 创建竖线（高度随机）
+        const line = document.createElement("div");
+        line.className = "line";
+        line.style.height = (60 + Math.random() * 60) + "px";
+
+        // 创建字母
+        const letter = document.createElement("div");
+        letter.className = "char";
+        letter.textContent = char;
+
+        // 组合
+        block.appendChild(line);
+        block.appendChild(letter);
+        container.appendChild(block);
     }
-});
+}
