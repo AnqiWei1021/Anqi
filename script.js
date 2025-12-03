@@ -23,7 +23,7 @@ text.split("").forEach((char, index) => {
     // 创建线条
     const line = document.createElement("div");
     line.className = "line";
-    line.style.width = "1px";
+    line.style.width = "0.6px";
     line.style.height = length + "px";
     line.style.backgroundColor = "black";
     line.style.opacity = "0"; // 初始不可见（用于动画）
