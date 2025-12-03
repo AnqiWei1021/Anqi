@@ -1,62 +1,40 @@
-/* Global */
+/* 页面整体风格：极简白底 + 居中排版 */
 body {
     margin: 0;
     padding: 0;
-    font-family: "Helvetica", sans-serif;
     background: white;
-    color: #222;
-}
-
-/* Navigation Bar */
-.navbar {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    padding: 20px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 16px;
+    align-items: center;
+    height: 100vh;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-.navbar a:hover {
-    color: #000;
-}
-
-/* Hero Section */
-.hero-section {
+/* 容器整体居中 */
+.container {
     text-align: center;
-    padding: 60px 20px;
 }
 
-.hero-section h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
-.hero-section h2 {
-    font-size: 20px;
-    color: #555;
-    font-weight: 400;
-    margin-bottom: 30px;
-}
-
-/* Avatar */
-.avatar {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    object-fit: cover;
+/* 字母上方竖线区域 */
+.lines {
+    display: flex;
+    justify-content: center;
+    height: 180px; /* 可调：整体线条高度 */
     margin-bottom: 20px;
-    border: 3px solid #ddd;
 }
 
-/* Email */
-.email {
-    font-size: 16px;
-    color: #777;
+/* 每一条竖线 */
+.line {
+    width: 1px;
+    background: black;
+    margin: 0 6px;  /* 字距 */
+    opacity: 0.8;
+    align-self: flex-end; /* 让线条底部对齐字母顶部 */
+}
+
+/* 标题样式 */
+.title {
+    font-size: 28px;
+    letter-spacing: 4px; /* 字距 */
+    font-weight: 300;
 }
