@@ -1,60 +1,56 @@
 body {
-    background: white;
-    height: 100vh;
     margin: 0;
+    padding: 0;
+    background: white;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 150px;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    height: 200vh;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* 整体容器置中 */
-#text-container {
+.container {
+    margin-top: 120px;
     text-align: center;
-    position: relative;
 }
 
-/* 单个字母的容器 */
+/* 每个字母必须 inline-block 否则会竖排！ */
 .letter-block {
     display: inline-block;
     position: relative;
-    margin: 0 3px;
-}
-
-/* 从上到下的下落线条 */
-.line {
-    width: 1px;
-    background: #999;
-    display: block;
-    margin: 0 auto;
-    animation: drop 1.5s ease-out forwards, sway 3s ease-in-out infinite;
+    margin: 0 6px;
+    vertical-align: bottom;
 }
 
 /* 字母样式 */
 .letter {
-    font-size: 28px;
-    font-weight: 600;  /* ← 字母加粗 */
-    color: #333;
-    opacity: 0;
-    animation: fadeIn 1.2s ease forwards 1s;
+    font-size: 32px;
+    font-weight: 600;
+    color: black;
+    position: relative;
+    z-index: 10;
 }
 
-/* 线条下落动画 */
+/* 每条线 */
+.line {
+    width: 2px;
+    background-color: #bbb;
+    position: absolute;
+    top: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: drop 1.2s ease forwards, sway 3s ease-in-out infinite;
+}
+
+/* 柔和下落动画 */
 @keyframes drop {
-    from { height: 0px; }
-    to { height: var(--h); }
+    0% { height: 0; opacity: 0; }
+    100% { opacity: 1; }
 }
 
-/* 轻微摆动动画 */
+/* 微微摆动的风效果 */
 @keyframes sway {
-    0% { transform: rotate(0deg); }
-    50% { transform: rotate(2deg); }
-    100% { transform: rotate(0deg); }
-}
-
-/* 字母淡入 */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    0% { transform: translateX(-50%) rotate(0deg); }
+    50% { transform: translateX(-50%) rotate(1.5deg); }
+    100% { transform: translateX(-50%) rotate(0deg); }
 }
