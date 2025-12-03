@@ -15,7 +15,7 @@ body {
 
 .container {
     display: flex;
-    gap: 18px;   /* 字之间的距离 */
+    gap: 23px;   /* 字之间的距离 */
 }
 
 /* 每个字母 + 一条线 */
