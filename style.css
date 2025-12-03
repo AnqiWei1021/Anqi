@@ -255,3 +255,33 @@ body {
     margin: 25px auto;
     border-radius: 6px;
 }
+/* 顶部信息（左对齐、细字体、行距紧凑） */
+.writing-meta {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+
+/* 大标题居中 + 更宽行距 */
+.center-title {
+    text-align: center;
+    line-height: 1.35;
+    margin-bottom: 40px;
+}
+
+/* 图片展示区 */
+.writing-figure {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.writing-figure img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 6px;
+}
+
+.writing-figure figcaption {
+    font-size: 14px;
+    color: #555
