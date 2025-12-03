@@ -120,7 +120,7 @@ body {
 .navbar {
     display: flex;
     justify-content: center;
-    gap: 40px; /* 调整导航间距 */
+    gap: 50px; /* 调整导航间距 */
     font-size: 18px;
 }
 
@@ -136,7 +136,7 @@ body {
 .main-header {
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 80px; /* 增加与动画的距离 */
+    margin-bottom: 100px; /* 增加与动画的距离 */
 }
 
 .navbar {
