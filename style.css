@@ -9,9 +9,9 @@ body {
 .center-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: -100px; /* 可调：越小越往上 */
+    margin-top: -150px; /* 数值越小越往上 */
 }
+
 
 
 .container {
@@ -95,10 +95,10 @@ body {
 /* 整体置中排列 */
 .main-header {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 60px;   /* 原本40，往下移 */
     margin-bottom: 40px;
-    font-family: "Helvetica Neue", Arial, sans-serif;
 }
+
 
 /* 大标题：更大更粗 */
 .main-header h1 {
@@ -140,8 +140,20 @@ body {
 }
 
 .navbar {
-    margin-top: 20px;  /* 导航与副标题间距 */
-    margin-bottom: 40px; /* 导航与动画间距 */
+    margin-top: 25px;
+    margin-bottom: 60px;  /* 导航与动画之间更大空间 */
+}
+.navbar {
+    margin-top: 25px;
+    margin-bottom: 60px;
+    padding: 10px 0;
+
+    border-top: 1px solid #ddd;   /* 上横线 */
+    border-bottom: 1px solid #ddd; /* 下横线 */
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;  /* 三个按钮距离 */
 }
 
 
