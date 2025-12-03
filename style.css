@@ -1,46 +1,50 @@
-/* 整页置中 */
+/* 整页置中（水平 + 垂直）*/
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
     display: flex;
-    justify-content: center;   /* 水平居中 */
-    align-items: center;       /* 垂直居中 */
+    justify-content: center;
+    align-items: center;
     background: white;
     font-family: Arial, sans-serif;
 }
 
-/* 容器自动排列每个字母区块为横向 */
-#text-container {
-    display: flex;
-    gap: 20px; /* 字母间距可调 */
+
+/* 包裹整个组合，使文字始终在页面正中央 */
+#center-wrapper {
+    text-align: center;
+    position: relative;
 }
 
-/* 每个字母与线条组成一个垂直组合 */
+
+/* 字母横向排列 */
+#text-container {
+    display: flex;
+    gap: 18px; /* 字母之间的距离 */
+}
+
+
+/* 字母与线条的垂直组合 */
 .letter-block {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
 /* 字母样式 */
 .letter {
-    font-size: 28px;
-    font-weight: 600; /* 加粗 */
-    letter-spacing: 2px;
+    font-size: 32px;
+    font-weight: 600;
 }
 
-/* 线条样式 */
+
+/* 竖线：从页面顶部一直拉到字母上方 */
 .line {
-    width: 1px;
-    background-color: #222;
+    width: 1.5px;
+    background-color: black;
     margin-bottom: 10px;
-    animation: float 3s ease-in-out infinite;
-}
-
-/* 柔和摆动动画 */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(8px); }
-    100% { transform: translateY(0px); }
+    position: relative;
+    top: calc(-50vh);  /* ⭐ 让线条从页面顶部开始 */
 }
