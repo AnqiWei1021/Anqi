@@ -9,7 +9,7 @@ body {
 /* 柔和下落动画 */
 @keyframes drop {
     0% {
-        transform: translateY(-80px);
+        transform: translateY(-250px); /* 從更上面掉下來 */
         opacity: 0;
     }
     100% {
