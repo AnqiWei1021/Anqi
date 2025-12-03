@@ -23,17 +23,39 @@ body {
     margin: 0 4px;
 }
 
-/* 竖线 */
+/* 竖线默认样式 */
 .line {
     width: 1px;
     background: black;
     margin-bottom: 8px;
-    opacity: 0.8;
+    opacity: 0;
+    transform-origin: top;
+    animation: drop 0.8s ease-out forwards, sway 3.5s ease-in-out infinite;
 }
 
-/* 字母 */
+/* 柔和下落动画 */
+@keyframes drop {
+    0% {
+        height: 0px;
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+}
+
+/* 微微摆动动画 */
+@keyframes sway {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}
+
+/* 字母样式 */
 .char {
     font-size: 28px;
-    font-weight: 600; /* 加粗在这里修改 */
+    font-weight: 600; /* 你可以改成 500, 700, 900 */
     letter-spacing: 1px;
 }
