@@ -1,69 +1,70 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    height: 100vh;
+    margin: 0;
     background: white;
+    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
 
-/* 讓整個文字 + 線條群固定在視窗正中央 */
-#text-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/* 全体居中容器 */
+.center-wrapper {
     display: flex;
-    gap: 25px;
-    align-items: flex-start;   /* ⭐ 重要：允許線條往上長 */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 真正垂直居中 */
 }
 
-/* 每一組（線條 + 字母）為一個 block */
+.container {
+    display: flex;
+    gap: 18px;   /* 字之间的距离 */
+}
+
+/* 每个字母 + 一条线 */
 .block {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* 線條 */
+/* 线条——更细、更短、更轻 */
 .line {
     width: 1px;
-    background-color: #888;
-    opacity: 1;
+    background: black;
+    opacity: 0.9;
+    
+    /* 从顶部掉下来动画 */
     transform-origin: top;
-    animation: drop 1.2s ease-out forwards;
+    animation: drop 0.9s ease-out forwards, sway 3s ease-in-out infinite;
 }
 
 /* 字母 */
 .letter {
-    font-size: 28px;
-    font-weight: 600;
+    margin-top: 10px; /* 字母与线条距离 */
+    font-size: 18px; 
+    font-weight: 600; /* 略微加粗 */
+
     opacity: 0;
-    animation: fadeIn 1.2s ease forwards;
+    animation: fade-in 0.9s ease-out forwards;
 }
 
-/* 掉落動畫 */
+/* --- 动画定义 --- */
+
 @keyframes drop {
-    from {
-        height: 0;
-        opacity: 0;
+    0% {
+        transform: scaleY(0);
     }
-    to {
-        opacity: 1;
+    100% {
+        transform: scaleY(1);
     }
 }
 
-/* 字母淡入 */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(6px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(-8px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 微微摆动 */
+@keyframes sway {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(1.4deg); }
+    100% { transform: rotate(0deg); }
 }
