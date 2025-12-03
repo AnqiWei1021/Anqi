@@ -12,12 +12,10 @@ text.split("").forEach((char, index) => {
     const line = document.createElement("div");
     line.className = "line";
 
-    let randomHeight = Math.floor(Math.random() * 180) + 120; // 120–300px
-    line.style.height = randomHeight + "px";
+    let height = Math.floor(Math.random() * 180) + 120;
+    line.style.height = height + "px";
 
-    // 逐个延迟下落动画
     line.style.animationDelay = `${index * 0.12}s`;
-    letter.style.animationDelay = `${index * 0.12}s`;
 
     block.appendChild(line);
     block.appendChild(letter);
