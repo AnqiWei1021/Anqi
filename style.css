@@ -10,8 +10,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* 真正垂直居中 */
+    margin-top: -50px; /* 可调：越小越往上 */
 }
+
 
 .container {
     display: flex;
