@@ -32,7 +32,7 @@ body {
     font-weight: 600;
     position: relative;
     padding: 15px 0;
-    margin-bottom: 80px; /* 把下面动画整体推下去 */
+    margin-bottom: 120px; /* 把下面动画整体推下去 */
 }
 
 .navbar a {
@@ -63,7 +63,7 @@ body {
 .center-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 0; /* 再要向下/上移动可以改这里 */
+    margin-top: 120; /* 再要向下/上移动可以改这里 */
 }
 
 /* 让这块至少有一点高度，防止你以为“空白”其实在下面 */
