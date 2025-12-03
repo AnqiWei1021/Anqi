@@ -1,4 +1,12 @@
-/* 顶部标题 */
+/* ========== 全局 ========== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+}
+
+/* ========== 顶部标题 ========== */
 .site-header {
     text-align: center;
     margin-top: 20px;
@@ -15,7 +23,7 @@
     margin-bottom: 20px;
 }
 
-/* 导航栏 */
+/* ========== 导航栏 ========== */
 .navbar {
     display: flex;
     justify-content: center;
@@ -24,9 +32,7 @@
     font-weight: 600;
     position: relative;
     padding: 15px 0;
-
-    /* 🚨 关键：导航栏占据空间，避免动画贴近它 */
-    margin-bottom: 80px;
+    margin-bottom: 80px; /* 把下面动画整体推下去 */
 }
 
 .navbar a {
@@ -34,7 +40,6 @@
     color: black;
 }
 
-/* 导航上下横线 */
 .navbar::before,
 .navbar::after {
     content: "";
@@ -54,9 +59,67 @@
     bottom: 0;
 }
 
-/* 🚨 绝对关键：把动画整体往下推 */
+/* ========== 动画所在区域整体位置 ========== */
 .center-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 40px !important; /* 尽量确保生效 */
+    margin-top: 0; /* 再要向下/上移动可以改这里 */
+}
+
+/* 让这块至少有一点高度，防止你以为“空白”其实在下面 */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    min-height: 260px;
+}
+
+/* ========== 每个字母 + 线条的组合 ========== */
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 线条 */
+.line {
+    width: 1px;              /* 细一点 */
+    background-color: #555;
+    height: 180px;           /* 基础长度 */
+    opacity: 0;
+    animation: dropLine 1.8s ease forwards;
+}
+
+/* 字母 */
+.letter {
+    font-size: 16px;   /* 小一点 */
+    font-weight: 600;  /* 粗一点 */
+    margin-top: 6px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards, wobble 3s ease-in-out infinite;
+}
+
+/* 线条下落动画 */
+@keyframes dropLine {
+    0% {
+        height: 0;
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 字母淡入 */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 微微摆动 */
+@keyframes wobble {
+    0%   { transform: translateX(0px); }
+    50%  { transform: translateX(2px); }
+    100% { transform: translateX(0px); }
 }
