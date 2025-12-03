@@ -58,6 +58,46 @@ body {
 .navbar::after {
     bottom: 0;
 }
+/* Dropdown menu styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.dropbtn {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    z-index: 1000;
+    text-align: left;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 0;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+}
+
+/* Show menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 /* ========== 动画所在区域整体位置 ========== */
 .center-wrapper {
