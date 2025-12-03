@@ -1,33 +1,46 @@
 const text = "I think therefore I am.";
 const container = document.getElementById("text-container");
 
+// 居中容器
+container.style.position = "absolute";
+container.style.top = "50%";
+container.style.left = "50%";
+container.style.transform = "translate(-50%, -50%)";
+container.style.display = "flex";
+container.style.gap = "18px"; // 字母间距
+
 text.split("").forEach((char, index) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "char-wrapper";
+    wrapper.style.display = "flex";
+    wrapper.style.flexDirection = "column";
+    wrapper.style.alignItems = "center";
+    wrapper.style.position = "relative";
 
-    if (char === " ") {
-        const space = document.createElement("div");
-        space.style.width = "20px";
-        container.appendChild(space);
-        return;
-    }
+    // 线条长度（你要的更长版本 150–300px）
+    const length = 150 + Math.random() * 150;
 
-    const block = document.createElement("div");
-    block.className = "letter-block";
-
+    // 创建线条
     const line = document.createElement("div");
     line.className = "line";
-
-    /* ⭐ 线条长短不一（但差距不会太大） */
-    const length = 40 + Math.random() * 80;   // 40–120px
+    line.style.width = "1px";
     line.style.height = length + "px";
+    line.style.backgroundColor = "black";
+    line.style.opacity = "0"; // 初始不可见（用于动画）
 
-    /* ⭐ 每条线稍微延迟掉落，让动画更自然 */
-    line.style.animationDelay = `${index * 0.1}s`;
-
+    // 创建字母
     const letter = document.createElement("div");
     letter.className = "letter";
     letter.textContent = char;
+    letter.style.fontSize = "28px";
+    letter.style.fontWeight = "700";
 
-    block.appendChild(line);
-    block.appendChild(letter);
-    container.appendChild(block);
+    // 动画：线条淡入，下落
+    line.style.animation = `drop 1.2s ease-out forwards ${index * 0.05}s`;
+    // 动画：字母轻轻摆动（可选）
+    letter.style.animation = `float 2s ease-in-out infinite alternate ${index * 0.1}s`;
+
+    wrapper.appendChild(line);
+    wrapper.appendChild(letter);
+    container.appendChild(wrapper);
 });
