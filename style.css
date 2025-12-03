@@ -1,4 +1,3 @@
-/* 页面整体风格：极简白底 + 居中排版 */
 body {
     margin: 0;
     padding: 0;
@@ -10,31 +9,31 @@ body {
     height: 100vh;
 }
 
-/* 容器整体居中 */
 .container {
-    text-align: center;
-}
-
-/* 字母上方竖线区域 */
-.lines {
     display: flex;
     justify-content: center;
-    height: 180px; /* 可调：整体线条高度 */
-    margin-bottom: 20px;
+    align-items: flex-start;
 }
 
-/* 每一条竖线 */
+/* 每个字母 + 对应线 的容器 */
+.char-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 4px;
+}
+
+/* 竖线 */
 .line {
     width: 1px;
     background: black;
-    margin: 0 6px;  /* 字距 */
+    margin-bottom: 8px;
     opacity: 0.8;
-    align-self: flex-end; /* 让线条底部对齐字母顶部 */
 }
 
-/* 标题样式 */
-.title {
+/* 字母 */
+.char {
     font-size: 28px;
-    letter-spacing: 4px; /* 字距 */
-    font-weight: 300;
+    font-weight: 600; /* 加粗在这里修改 */
+    letter-spacing: 1px;
 }
