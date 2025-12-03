@@ -1,55 +1,46 @@
+/* 整页置中 */
 body {
     margin: 0;
     padding: 0;
-    background: white;
+    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 200vh;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    justify-content: center;   /* 水平居中 */
+    align-items: center;       /* 垂直居中 */
+    background: white;
+    font-family: Arial, sans-serif;
 }
 
-/* 新增 wrapper，强制横向环境 */
-.wrapper {
-    margin-top: 150px;
-    white-space: nowrap;   /* ⭐ 强制所有内容一行显示 */
+/* 容器自动排列每个字母区块为横向 */
+#text-container {
+    display: flex;
+    gap: 20px; /* 字母间距可调 */
 }
 
-/* 每个字母的容器 */
+/* 每个字母与线条组成一个垂直组合 */
 .letter-block {
-    display: inline-block !important;   /* ⭐ 必须 inline-block */
-    text-align: center;
-    margin: 0 10px;
-    position: relative;
-    vertical-align: bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* 字母 */
+/* 字母样式 */
 .letter {
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 600; /* 加粗 */
+    letter-spacing: 2px;
 }
 
-/* 线 */
+/* 线条样式 */
 .line {
-    width: 2px;
-    background-color: #bbb;
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: drop 1.2s ease forwards, sway 3s ease-in-out infinite;
+    width: 1px;
+    background-color: #222;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
 }
 
-/* 柔和落下 */
-@keyframes drop {
-    0% { height: 0; opacity: 0; }
-    100% { opacity: 1; }
-}
-
-/* 微微摆动 */
-@keyframes sway {
-    0% { transform: translateX(-50%) rotate(0); }
-    50% { transform: translateX(-50%) rotate(1.5deg); }
-    100% { transform: translateX(-50%) rotate(0); }
+/* 柔和摆动动画 */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(8px); }
+    100% { transform: translateY(0px); }
 }
