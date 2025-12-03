@@ -1,45 +1,51 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background: white;
+    box-sizing: border-box;
+}
+
+body {
     height: 100vh;
+    background: white;
     overflow-x: hidden;
 }
 
+/* 讓整個文字 + 線條群固定在視窗正中央 */
 #text-container {
     position: absolute;
-    top: 50%;            /* 垂直中間 */
-    left: 50%;           /* 水平中間 */
-    transform: translate(-50%, -30%); /* 微微上移，美观 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    gap: 20px;
+    gap: 25px;
+    align-items: flex-start;   /* ⭐ 重要：允許線條往上長 */
 }
 
+/* 每一組（線條 + 字母）為一個 block */
 .block {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* 線條設置 */
+/* 線條 */
 .line {
-    width: 1px;             /* 更細 */
-    background-color: #777; /* 柔和灰色 */
-    margin-bottom: 8px;
+    width: 1px;
+    background-color: #888;
+    opacity: 1;
     transform-origin: top;
-    animation: drop 0.9s ease-out forwards;
+    animation: drop 1.2s ease-out forwards;
 }
 
-/* 字母樣式 */
+/* 字母 */
 .letter {
     font-size: 28px;
-    font-weight: 600;     /* 加粗 */
+    font-weight: 600;
     opacity: 0;
-    animation: fadeIn 1s ease forwards;
+    animation: fadeIn 1.2s ease forwards;
 }
 
-/* 線條掉落動畫 */
+/* 掉落動畫 */
 @keyframes drop {
     from {
         height: 0;
@@ -54,7 +60,7 @@ body {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(6px);
     }
     to {
         opacity: 1;
