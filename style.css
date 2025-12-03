@@ -1,13 +1,32 @@
-/* 导航栏视觉格式 */
+/* 顶部标题 */
+.site-header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* 导航栏 */
 .navbar {
     display: flex;
     justify-content: center;
     gap: 40px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    margin-top: 10px;
     position: relative;
-    padding: 12px 0;
+    padding: 15px 0;
+
+    /* 🚨 关键：导航栏占据空间，避免动画贴近它 */
+    margin-bottom: 80px;
 }
 
 .navbar a {
@@ -15,6 +34,7 @@
     color: black;
 }
 
+/* 导航上下横线 */
 .navbar::before,
 .navbar::after {
     content: "";
@@ -34,7 +54,9 @@
     bottom: 0;
 }
 
-/* 动画整体向下移动 */
+/* 🚨 绝对关键：把动画整体往下推 */
 .center-wrapper {
-    margin-top: 180px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px !important; /* 尽量确保生效 */
 }
