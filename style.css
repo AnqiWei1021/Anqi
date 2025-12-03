@@ -291,3 +291,10 @@ body {
 .writing-figure figcaption {
     font-size: 14px;
     color: #555
+.section-divider {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    margin: 50px auto 30px auto; /* 上方间距 50px，下方 30px */
+    width: 80%;   /* 横线宽度可调：80% 比较优雅 */
+}
