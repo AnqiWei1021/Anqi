@@ -1,64 +1,29 @@
-/* 页面整体 */
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
     background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* 水平+垂直居中容器 */
-#center-wrapper {
-    text-align: center;
-}
-
-/* 字母横向排列 */
-#text-container {
-    display: flex;
-    gap: 18px;
-}
-
-/* 字母与线条组合 */
-.letter-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* 字母 */
-.letter {
-    font-size: 32px;
-    font-weight: 600;
-    color: #000;
-}
-
-/* 竖线 */
-.line {
-    width: 2px;
-    background-color: #000;
-    margin-bottom: 10px;
-
-    /* 动画起点：短线在标准位置 */
-    height: 0;
-    opacity: 0;
-
-    /* 动画 */
-    animation: drop 0.8s ease-out forwards;
-}
-
-/* 竖线掉落动画 */
-/* 从页面顶部 → 正常位置 */
+/* 柔和下落动画 */
 @keyframes drop {
     0% {
-        transform: translateY(-200px);
-        height: 0;
+        transform: translateY(-80px);
         opacity: 0;
     }
     100% {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+/* 字母摆动动画 */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(6px); }
+}
+
+.letter {
+    margin-top: 6px;
 }
