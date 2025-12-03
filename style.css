@@ -91,3 +91,45 @@ body {
 .top-nav a:hover {
     opacity: 1;
 }
+/* 整体置中排列 */
+.main-header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* 大标题：更大更粗 */
+.main-header h1 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+/* 副标题：更小更细 */
+.main-header h2 {
+    font-size: 18px;
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* 导航栏 */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* 调整导航间距 */
+    font-size: 18px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
