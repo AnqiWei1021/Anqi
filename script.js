@@ -12,12 +12,8 @@ text.split("").forEach((char, index) => {
     const line = document.createElement("div");
     line.className = "line";
 
-    // ⭐ 让线条更明显长短不一（80px - 260px）
-    let height = Math.floor(Math.random() * 180) + 80;
+    let height = Math.floor(Math.random() * 180) + 80; // 长短不一
     line.style.height = height + "px";
-
-    // 落下动画延迟
-    line.style.animationDelay = `${index * 0.12}s`;
 
     block.appendChild(line);
     block.appendChild(letter);
