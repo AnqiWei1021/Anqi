@@ -10,23 +10,24 @@
 <body>
 
     <!-- 顶部标题区 -->
-    <header class="main-header">
-        <h1>Anqi Wei, MA – Digital Arts & Humanities</h1>
-        <p>A student & creative thinker</p>
+    <header class="site-header">
+        <h1 class="title">Anqi Wei, MA – Digital Arts & Humanities</h1>
+        <p class="subtitle">A student & creative thinker</p>
+
+        <!-- 导航栏 -->
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="papers.html">Writing</a>
+        </nav>
     </header>
 
-    <!-- 导航栏（必须在动画上方） -->
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="papers.html">Writing</a>
-    </nav>
-
-    <!-- 动画本体 -->
+    <!-- 文字动画容器（必须放在 header 下方）-->
     <div class="center-wrapper">
         <div class="container" id="text-container"></div>
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
