@@ -123,3 +123,42 @@ body {
     50%  { transform: translateX(2px); }
     100% { transform: translateX(0px); }
 }
+/* ----- Footer ----- */
+.footer {
+    margin-top: 80px;
+    padding: 40px 20px;
+    text-align: center;          /* 让所有文字居中 */
+    font-family: 'Helvetica', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.footer h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* 自我介绍段落容器，限制宽度 + 自动居中 */
+.footer .intro {
+    max-width: 700px;            /* 控制宽度 */
+    margin: 20px auto 0;         /* 自动左右居中 */
+    font-size: 14px;
+    color: #444;
+    text-align: center;          /* 再次确保文字居中 */
+    word-wrap: break-word;       /* 强制长单词换行 */
+}
