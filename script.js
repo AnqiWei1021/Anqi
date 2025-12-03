@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         line.className = "line";
 
         // 线条长度（较短 & 差异不大）
-        const length = 120 + Math.random() * 30;
+        const length = 120 + Math.random() * 50;
         line.style.height = `${length}px`;
 
         // 动画延迟
