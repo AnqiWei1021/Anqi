@@ -9,48 +9,47 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-.container {
-    margin-top: 120px;
-    text-align: center;
+/* 新增 wrapper，强制横向环境 */
+.wrapper {
+    margin-top: 150px;
+    white-space: nowrap;   /* ⭐ 强制所有内容一行显示 */
 }
 
-/* 每个字母必须 inline-block 否则会竖排！ */
+/* 每个字母的容器 */
 .letter-block {
-    display: inline-block;
+    display: inline-block !important;   /* ⭐ 必须 inline-block */
+    text-align: center;
+    margin: 0 10px;
     position: relative;
-    margin: 0 6px;
     vertical-align: bottom;
 }
 
-/* 字母样式 */
+/* 字母 */
 .letter {
     font-size: 32px;
     font-weight: 600;
-    color: black;
-    position: relative;
-    z-index: 10;
 }
 
-/* 每条线 */
+/* 线 */
 .line {
     width: 2px;
     background-color: #bbb;
     position: absolute;
-    top: -300px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     animation: drop 1.2s ease forwards, sway 3s ease-in-out infinite;
 }
 
-/* 柔和下落动画 */
+/* 柔和落下 */
 @keyframes drop {
     0% { height: 0; opacity: 0; }
     100% { opacity: 1; }
 }
 
-/* 微微摆动的风效果 */
+/* 微微摆动 */
 @keyframes sway {
-    0% { transform: translateX(-50%) rotate(0deg); }
+    0% { transform: translateX(-50%) rotate(0); }
     50% { transform: translateX(-50%) rotate(1.5deg); }
-    100% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(0); }
 }
