@@ -19,10 +19,10 @@ text.split("").forEach((char, index) => {
     // 线条长度（150–300px）
     const length = 250 + Math.random() * 200;
 
-    // ⭐ 线条超细化：0.3px
+    // ⭐ 线条超细化：0.05px
     const line = document.createElement("div");
     line.className = "line";
-    line.style.width = "0.3px";        // 👈 更细线条
+    line.style.width = "0.05px";        // 👈 更细线条
     line.style.height = length + "px";
     line.style.backgroundColor = "black";
     line.style.opacity = "0";
@@ -30,7 +30,7 @@ text.split("").forEach((char, index) => {
     const letter = document.createElement("div");
     letter.className = "letter";
     letter.textContent = char;
-    letter.style.fontSize = "28px";
+    letter.style.fontSize = "25px";
     letter.style.fontWeight = "700";
 
     line.style.animation = `drop 1.2s ease-out forwards ${index * 0.05}s`;
