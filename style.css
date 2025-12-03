@@ -1,113 +1,40 @@
-/* ----------- 全局基础样式 ----------- */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: white;
-    text-align: center;
-}
-
-/* ----------- 标题区 ----------- */
-.main-header h1 {
-    font-size: 34px;
-    font-weight: 700;
-    margin-top: 60px;   /* 向下移动标题 */
-    margin-bottom: 10px;
-}
-
-.main-header p {
-    font-size: 18px;
-    color: #555;
-    margin-top: 5px;
-}
-
-/* ----------- 导航栏 ----------- */
+/* 导航栏视觉格式 */
 .navbar {
-    margin-top: 25px;
-    margin-bottom: 60px;
-    padding: 12px 0;
-
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-
     display: flex;
     justify-content: center;
-    gap: 60px;   /* 三个按钮间距更大 */
+    gap: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    position: relative;
+    padding: 12px 0;
 }
 
 .navbar a {
-    font-size: 18px;
-    font-weight: 500;
-    color: black;
     text-decoration: none;
+    color: black;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+.navbar::before,
+.navbar::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background-color: black;
 }
 
-/* ----------- 外层 wrapper，让动画整体上移 ----------- */
+.navbar::before {
+    top: 0;
+}
+
+.navbar::after {
+    bottom: 0;
+}
+
+/* 动画整体向下移动 */
 .center-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: -100px;   /* 数值越小越往上，可以调整 */
-}
-
-/* ----------- 动画容器 ----------- */
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 18px;   /* 字母之间间距 */
-}
-
-/* ----------- 每个字母 + 线条的组合 ----------- */
-.block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* ----------- 线条样式 ----------- */
-.line {
-    width: 1px;              /* 更细 */
-    background-color: #555;  /* 线条颜色 */
-    height: 180px;           /* 基础长度 */
-    opacity: 0;
-
-    animation: dropLine 1.8s ease forwards;
-}
-
-/* ----------- 字母样式 ----------- */
-.letter {
-    font-size: 16px;   /* 更小 */
-    font-weight: 600;  /* 更粗 */
-    margin-top: 6px;
-    opacity: 0;
-
-    animation: fadeIn 1s ease forwards, wobble 3s ease-in-out infinite;
-}
-
-/* ----------- 线条下落动画 ----------- */
-@keyframes dropLine {
-    0% {
-        height: 0;
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* ----------- 字母淡入动画 ----------- */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* ----------- 微微摆动动画（更艺术感） ----------- */
-@keyframes wobble {
-    0%   { transform: translateX(0px); }
-    50%  { transform: translateX(2px); }
-    100% { transform: translateX(0px); }
+    margin-top: 120px;
 }
