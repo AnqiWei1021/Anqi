@@ -108,3 +108,26 @@ body {
     font-size: 1.3rem;
     font-weight: 600;
 }
+/* --- Top Navigation Bar --- */
+.top-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    z-index: 999; /* 确保导航在最上层 */
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+.top-nav a:hover {
+    opacity: 1;
+}
