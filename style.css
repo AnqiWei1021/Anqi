@@ -796,3 +796,14 @@ body {
 .nav-btn:hover {
     background: rgba(0,0,0,0.7);
 }
+/* ===== 隐藏封面按钮，内容页显示按钮 ===== */
+
+/* 默认：所有翻页按钮都隐藏 */
+.nav-btn {
+    display: none;
+}
+
+/* 当进入 .book（内容页）时，按钮显示 */
+.book .nav-btn {
+    display: flex !important;
+}
