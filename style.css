@@ -313,29 +313,29 @@ body {
     align-items: center;
     position: relative;
     text-align: center;
+    font-family: "Arial Black", "Helvetica Neue", sans-serif;
 }
 
-/* 中间的大标题 */
+/* ===== 中间 PORTFOLIO. ===== */
 .cover-title {
-    font-size: 64px;
-    font-weight: 800;
+    font-size: 70px;
+    font-weight: 900;
     letter-spacing: 4px;
     margin: 0;
+    color: #fff;
 }
 
-/* 右下角信息区域 */
+/* ===== 右下角信息区域 ===== */
 .cover-info {
     position: absolute;
     bottom: 30px;
     right: 40px;
     text-align: right;
-    font-family: inherit;
 }
 
 /* 名字那一行 */
 .name-line {
-    font-size: 18px;
-    letter-spacing: 1px;
+    font-size: 20px;
     margin: 0;
     display: flex;
     gap: 6px;
@@ -344,17 +344,13 @@ body {
 }
 
 .underline {
-    width: 120px;
+    width: 140px;
     height: 1px;
     background: #fff;
     margin: 6px 0 4px auto;
 }
 
-/* 邮箱文字 */
 .contact {
-    font-size: 18px;
+    font-size: 20px;
     margin: 0;
 }
-
-/* 艺术字体可根据需要调整，如果你有指定字体文件可加入 @font-face */
-
