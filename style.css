@@ -836,3 +836,47 @@ body {
 .book .nav-btn {
     display: flex !important;
 }
+/* ===== 第二页两栏布局 ===== */
+
+.two-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 80px;
+    margin-top: 80px;
+}
+
+/* 左侧标题 */
+.left-col {
+    flex: 1;
+}
+
+.intro-name {
+    font-size: 90px;
+    font-weight: 900;
+    margin: 0;
+}
+
+/* 右侧内容 */
+.right-col {
+    flex: 1;
+    max-width: 450px;
+}
+
+.right-col h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.right-col ul {
+    padding-left: 20px;
+}
+
+.right-col li {
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.right-col p {
+    line-height: 1.4;
+}
