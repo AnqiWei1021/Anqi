@@ -686,23 +686,28 @@ body {
    3. 每页顶部标题栏
 ========================================= */
 
+/* 横线 */
+.divider-line {
+    width: 100%;
+    height: 2px;
+    background: black;
+    margin-top: 40px;     /* ⭐ 控制整体距离页面顶部 */
+    margin-bottom: 10px;  /* ⭐ 文字与横线之间的距离 */
+}
+
+/* 顶部文字行 */
 .top-bar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     font-weight: 700;
     font-size: 16px;
-    margin-top: 50px;   /* 👈 新增：整体上移 */
-    margin-bottom: 5px;  /* 看你喜欢，可以改小一点 */
+
+    /* ⭐ 让文字贴在横线下面 */
+    margin-top: 0;
+    margin-bottom: 50px;   /* 横线到内容之间的间距 */
 }
 
-.divider-line {
-    width: 100%;
-    height: 2px;
-    background: black;
-     margin-top: -200px;   /* 👈 新增：横线也上移 */
-    margin-bottom: 80px; /* 看你喜欢 */
-}
 
 
 /* =========================================
