@@ -692,7 +692,7 @@ body {
     justify-content: space-between;
     font-weight: 700;
     font-size: 16px;
-    margin-top: -180px;   /* 👈 新增：整体上移 */
+    margin-top: 100px;   /* 👈 新增：整体上移 */
     margin-bottom: 5px;  /* 看你喜欢，可以改小一点 */
 }
 
