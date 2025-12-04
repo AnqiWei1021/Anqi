@@ -172,3 +172,13 @@ body {
 .navbar a:hover {
     text-decoration: underline;
 }
+.main-header {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 80px; /* 增加与动画的距离 */
+}
+
+.navbar {
+    margin-top: 20px;  /* 导航与副标题间距 */
+    margin-bottom: 40px; /* 导航与动画间距 */
+}
