@@ -1,629 +1,115 @@
-/* ========== 全局 ========== */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: white;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Anqi Wei</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===== 封面 ===== -->
+    <section class="cover">
+        <h1 class="cover-title" id="title">
+            <span class="letter">P</span>
+            <span class="letter">O</span>
+            <span class="letter">R</span>
+            <span class="letter">T</span>
+            <span class="letter">F</span>
+            <span class="letter">O</span>
+            <span class="letter">L</span>
+            <span class="letter">I</span>
+            <span class="letter">O</span>
+            <span class="letter">.</span>
+        </h1>
+
+        <div class="cover-info">
+            <p class="name-line">
+                <span class="name">Anqi Wei</span>
+                <span class="divider">—</span>
+                <span class="subtitle">Portfolio</span>
+            </p>
+
+            <div class="underline"></div>
+            <p class="contact">125101394@umail.ucc.ie</p>
+        </div>
+    </section>
+
+
+
+    <!-- ======（恢复你的动画区域）======= -->
+    <div class="center-wrapper">
+        <div id="text-container" class="container"></div>
+    </div>
+
+
+
+    <!-- ===== 翻页书本 ===== -->
+    <div class="book">
+
+        <!-- 第 1 页 -->
+        <section class="page welcome-page">
+            <div class="top-bar">
+                <span>ANQI PORTFOLIO</span>
+                <span>01</span>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <h1 class="welcome-text">
+                WELCOME TO <span class="highlight">ANQI’s</span> PORTFOLIO.
+            </h1>
+
+            <h2 class="intro-name">ANQIWEI</h2>
+        </section>
+
+        <!-- 第 2 页 -->
+        <section class="page intro-page">
+            <div class="top-bar">
+                <span>ANQI PORTFOLIO</span>
+                <span>02</span>
+            </div>
+
+            <div class="divider-line"></div>
+
+            <h1 class="intro-name">ANQIWEI</h1>
+
+            <div class="intro-content">
+                <h3>Education:</h3>
+                <ul>
+                    <li><b>09/2017 – 07/2021</b><br>
+                        Gingko College of Hospitality Management, China<br>
+                        BA in Visual Communication Design (awarded)
+                    </li>
+
+                    <li><b>09/2025 – NOW</b><br>
+                        University College Cork, Ireland<br>
+                        MA in Digital Arts & Humanities
+                    </li>
+                </ul>
+
+                <h3>Design Competition:</h3>
+                <p>
+                    2020 Academy Award of Advertising Festival of Chinese College Students,<br>
+                    <b>National Excellence Award for Product Packaging Design</b><br><br>
+
+                    2019 Academy Award of Advertising Festival of Chinese College Students,<br>
+                    <b>National Excellence Award for Graphic Design</b>
+                </p>
+            </div>
+        </section>
 
-/* ========== 顶部标题 ========== */
-.site-header {
-    text-align: center;
-    margin-top: 20px;
-}
+    </div>
 
-.title {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 6px;
-}
 
-.subtitle {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
 
-/* ========== 导航栏 ========== */
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    font-size: 18px;
-    font-weight: 600;
-    position: relative;
-    padding: 15px 0;
-    margin-bottom: 120px; /* 把下面动画整体推下去 */
-}
+    <!-- 翻页按钮 -->
+    <button class="nav-btn left-btn">❮</button>
+    <button class="nav-btn right-btn">❯</button>
 
-.navbar a {
-    text-decoration: none;
-    color: black;
-}
+    <!-- JS -->
+    <script src="script.js"></script>
 
-.navbar::before,
-.navbar::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 1px;
-    background-color: black;
-}
-
-.navbar::before {
-    top: 0;
-}
-
-.navbar::after {
-    bottom: 0;
-}
-/* Dropdown menu styling */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin: 0 20px;
-}
-
-.dropbtn {
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 350px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 15px 20px;
-    z-index: 1000;
-    text-align: left;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 8px 0;
-    font-size: 15px;
-    color: black;
-    text-decoration: none;
-}
-
-.dropdown-content a:hover {
-    text-decoration: underline;
-}
-
-/* Show menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* ========== 动画所在区域整体位置 ========== */
-.center-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 120; /* 再要向下/上移动可以改这里 */
-}
-
-/* 让这块至少有一点高度，防止你以为“空白”其实在下面 */
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    min-height: 260px;
-}
-
-/* ========== 每个字母 + 线条的组合 ========== */
-.block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* 线条 */
-.line {
-    width: 1px;              /* 细一点 */
-    background-color: #555;
-    height: 180px;           /* 基础长度 */
-    opacity: 0;
-    animation: dropLine 1.8s ease forwards;
-}
-
-/* 字母 */
-.letter {
-    font-size: 16px;   /* 小一点 */
-    font-weight: 600;  /* 粗一点 */
-    margin-top: 6px;
-    opacity: 0;
-    animation: fadeIn 1s ease forwards, wobble 3s ease-in-out infinite;
-}
-
-/* 线条下落动画 */
-@keyframes dropLine {
-    0% {
-        height: 0;
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* 字母淡入 */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* 微微摆动 */
-@keyframes wobble {
-    0%   { transform: translateX(0px); }
-    50%  { transform: translateX(2px); }
-    100% { transform: translateX(0px); }
-}
-/* ----- Footer ----- */
-.footer {
-    margin-top: 40px;
-    padding: 40px 20px;
-    text-align: center;          /* 让所有文字居中 */
-    font-family: 'Helvetica', sans-serif;
-    color: #333;
-    line-height: 1.6;
-}
-
-.footer h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.footer p {
-    margin: 5px 0;
-}
-
-.footer a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}
-
-/* 自我介绍段落容器，限制宽度 + 自动居中 */
-.footer .intro {
-    max-width: 700px;            /* 控制宽度 */
-    margin: 20px auto 0;         /* 自动左右居中 */
-    font-size: 14px;
-    color: #444;
-    text-align: center;          /* 再次确保文字居中 */
-    word-wrap: break-word;       /* 强制长单词换行 */
-}
-/* Writing page layout */
-.writing-container {
-    max-width: 850px;
-    margin: 0 auto;
-    padding-top: 20px;
-    text-align: left;
-}
-
-.writing-title {
-    font-size: 36px;
-    font-weight: 800;
-    margin-bottom: 25px;
-    text-align: left;
-}
-
-.writing-intro {
-    font-size: 18px;
-    line-height: 1.7;
-    margin-bottom: 40px;
-}
-
-.writing-content h2 {
-    font-size: 26px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.writing-content h3 {
-    font-size: 20px;
-    margin-top: 25px;
-    font-weight: 700;
-}
-
-.writing-content p {
-    font-size: 17px;
-    line-height: 1.8;
-    margin-bottom: 18px;
-}
-
-.writing-content ul {
-    padding-left: 25px;
-    font-size: 17px;
-    line-height: 1.8;
-}
-
-.writing-content img {
-    width: 100%;
-    max-width: 750px;
-    display: block;
-    margin: 25px auto;
-    border-radius: 6px;
-}
-/* 顶部信息（左对齐、细字体、行距紧凑） */
-.writing-meta {
-    text-align: left;
-    font-size: 16px;
-    line-height: 1.4;
-    margin-bottom: -20px;
-}
-
-/* 大标题居中 + 更宽行距 */
-.center-title {
-    text-align: center;
-    line-height: 1.35;
-    margin-bottom: 40px;
-}
-
-/* 图片展示区 */
-.writing-figure {
-    text-align: center;
-    margin: 40px auto;
-}
-
-.writing-figure img {
-    width: 100%;
-    max-width: 900px;
-    border-radius: 6px;  
-}
-.writing-figure figcaption {
-    margin-top: 12px;   /* 图片和注释之间的距离 */
-    font-size: 14px;
-    color: #666;
-}
-
-
-.writing-figure figcaption {
-    font-size: 14px;
-    color: #555
-}
-.section-divider {
-    border: none;
-    height: 2px;
-    background-color: #ddd;
-    margin: 50px auto 30px auto; /* 上方间距 50px，下方 30px */
-    width: 80%;   /* 横线宽度可调：80% 比较优雅 */
-}
-.my-info {
-    margin-top: -40px !important;
-}
-
-/* 封面整体 */
-.cover {
-    background: #000;
-    color: #fff;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    text-align: center;
-    font-family: "Arial Black", "Helvetica Neue", sans-serif;
-}
-
-/* ===== 中间 PORTFOLIO. ===== */
-.cover-title {
-    font-size: 70px;
-    font-weight: 900;
-    letter-spacing: 4px;
-    margin: 0;
-    color: #fff;
-}
-
-/* ====== 最终版右下角精致排版 ====== */
-.cover-info {
-    position: absolute;
-    bottom: 45px;
-    right: 70px;
-    text-align: right;
-    font-family: "Helvetica", "Arial", sans-serif;
-    font-weight: 400;
-    line-height: 1.2;
-}
-
-/* 名字行 */
-.name-line {
-    font-size: 16px;
-    margin: 0;
-    display: inline-flex;
-    align-items: baseline;     /* ← 关键：让所有文字在同一基线对齐！ */
-    white-space: nowrap;
-    gap: 6px;
-    font-weight: 400;          /* ← 字再粗一点（稍微提升对比） */
-    letter-spacing: 0.5px;
-}
-
-.name-line span {
-    line-height: 1;            /* ← 消除默认行高差异 */
-    display: inline-block;
-    vertical-align: baseline;  /* ← 进一步保证字在同一条线上 */
-}
-
-
-/* 横线（精致、细且更长） */
-.underline {
-    width: 180px;              /* ← 加长，让视觉更平衡 */
-    height: 1px;
-    background: #fff;
-    margin: 6px 0 6px auto;
-    opacity: 0.85;
-}
-
-/* 邮箱行 */
-.contact {
-    font-size: 15px;
-    margin: 0;
-    font-weight: 300;
-    letter-spacing: 0.5px;     /* 让字体更高级更容易对齐 */
-}
-
-
-/* ===== 覆盖原本动画，启用闪电劈中效果 ===== */
-.cover-title {
-    position: relative;
-    font-weight: 900;
-    animation: lightningStrike 3s infinite;
-}
-
-/* 闪电击中效果 */
-@keyframes lightningStrike {
-    0%, 92%, 100% {
-        text-shadow: 0 0 0px #ffffff00;
-        opacity: 1;
-        transform: translate(0,0);
-    }
-    /* 第一闪 */
-    93% {
-        text-shadow: 0 0 15px #ffffff, 0 0 25px #4fc3f7;
-        opacity: 1;
-        transform: translate(2px, -2px);
-    }
-    /* 第二闪（更强） */
-    94% {
-        text-shadow: 0 0 25px #ffffff, 0 0 40px #82b1ff;
-        opacity: 1;
-        transform: translate(-3px, 3px);
-    }
-    /* 第三闪（快速回落） */
-    95% {
-        text-shadow: 0 0 10px #ffffff, 0 0 20px #4fc3f7;
-        opacity: 0.85;
-        transform: translate(1px, -1px);
-    }
-}
-
-/* 加入轻微的随机 glitch 抖动 */
-.cover-title::before,
-.cover-title::after {
-    content: "PORTFOLIO.";
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    color: #fff;
-    pointer-events: none;
-}
-
-.cover-title::before {
-    animation: glitchBefore 3s infinite;
-    color: #4fc3f7;  /* 冷光蓝 */
-}
-
-.cover-title::after {
-    animation: glitchAfter 3s infinite;
-    color: #ff4081;  /* 电光粉 */
-}
-
-@keyframes glitchBefore {
-    0%, 95%, 100% { opacity: 0; transform: none; }
-    93% { opacity: 0.5; transform: translate(-2px, -1px); }
-    94% { opacity: 0.7; transform: translate(3px, 2px); }
-}
-
-@keyframes glitchAfter {
-    0%, 95%, 100% { opacity: 0; transform: none; }
-    93% { opacity: 0.4; transform: translate(2px, 1px); }
-    94% { opacity: 0.6; transform: translate(-3px, -2px); }
-}
-/* ===== 翻页容器 ===== */
-.book-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    transition: transform 0.6s ease;
-}
-
-/* 每一页 */
-.page {
-    min-width: 100%;
-    height: 100%;
-    padding: 60px;
-    box-sizing: border-box;
-    background: #fafafa;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.page h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.page p {
-    font-size: 20px;
-    width: 70%;
-    text-align: center;
-}
-
-/* ===== 翻页按钮（强制显示版） ===== */
-.nav-btn {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 50px;          /* 按钮变大，容易看到 */
-    background: rgba(0,0,0,0.4);
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    border: none;
-    color: white;             /* 白色字体 */
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 9999999;         /* 绝对最顶层 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.left-btn {
-    left: 20px;
-}
-
-.right-btn {
-    right: 20px;
-}
-
-.nav-btn:hover {
-    background: rgba(0,0,0,0.8);
-}
-
-/* ----------- Welcome 第一页布局 ----------- */
-
-.welcome-page {
-    background: white;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 60px;
-    box-sizing: border-box;
-    justify-content: flex-start;
-}
-
-/* 顶部标题栏 */
-.top-bar {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-/* 顶部横线 */
-.divider-line {
-    width: 100%;
-    height: 2px;
-    background: black;
-    margin-bottom: 120px;
-}
-
-/* 中间欢迎文字 */
-.welcome-text {
-    font-size: 36px;
-    font-weight: 900;
-    text-align: center;
-    letter-spacing: 2px;
-}
-
-.highlight {
-    font-weight: 900;
-    -webkit-text-stroke: 1px black; /* 轮廓字效果 */
-    color: white;
-}
-/* ---------- ANQIWEI 艺术字 ---------- */
-.intro-name {
-    font-family: 'Arial Black', 'Helvetica Neue', sans-serif; /* 比较接近原 PDF 粗方体风格 */
-    font-size: 90px;
-    font-weight: 900;
-    letter-spacing: -3px;   /* 字间距变紧，接近 PDF */
-    transform: scaleX(1.05);  /* 横向轻微拉宽，还原 PDF 效果 */
-    margin: 40px 0 60px;
-}
-/* ======= 翻页书本容器 ======= */
-.book {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* 每一页 */
-.page {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 100%; /* 默认在右边，等待进入 */
-    background: white;
-    transition: all 0.7s ease;
-}
-
-/* 当前页进入视口 */
-.page.active {
-    left: 0;
-}
-
-/* 上一页退到左边 */
-.page.prev {
-    left: -100%;
-}
-/* ====== 翻页书本核心布局 ====== */
-
-/* book 容器占满全屏 */
-.book {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-/* 每一页的默认位置（全部在屏幕右侧）*/
-.page {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    height: 100%;
-    background: white;
-    transition: left 0.8s ease;
-}
-
-/* 当前页滑入中间 */
-.page.active {
-    left: 0;
-}
-
-/* 前一页滑到左侧 */
-.page.prev {
-    left: -100%;
-}
-.cover {
-    position: relative;
-    z-index: 1 !important;
-}
-.nav-btn {
-    position: fixed !important;
-    z-index: 999999999 !important;
-    pointer-events: auto !important; /* 允许点击 */
-}
+</body>
+</html>
