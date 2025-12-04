@@ -756,25 +756,27 @@ body {
    5. Education Page
 ========================================= */
 
-.intro-content {
-    margin-top: 40px;
-    font-size: 18px;
-    line-height: 1.6;
+/* ===== 第 2 页布局：左右双栏 ===== */
+.intro-page {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;           /* 左右间距 */
+    padding: 0 80px;
+    align-items: flex-start;
 }
 
-.intro-content h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+/* 左侧标题 ANQIWEI */
+.intro-name {
+    flex: 1;
+    font-size: 90px;
     font-weight: 900;
+    margin-top: 60px;
 }
 
-.intro-content ul {
-    margin-left: 20px;
-    margin-bottom: 30px;
-}
-
-.intro-content li {
-    margin-bottom: 15px;
+/* 右侧内容整体 */
+.intro-content {
+    flex: 2;
+    margin-top: 60px;
 }
 
 
