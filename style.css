@@ -441,3 +441,63 @@ body {
     93% { opacity: 0.4; transform: translate(2px, 1px); }
     94% { opacity: 0.6; transform: translate(-3px, -2px); }
 }
+/* ===== 翻页容器 ===== */
+.book-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    transition: transform 0.6s ease;
+}
+
+/* 每一页 */
+.page {
+    min-width: 100%;
+    height: 100%;
+    padding: 60px;
+    box-sizing: border-box;
+    background: #fafafa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.page p {
+    font-size: 20px;
+    width: 70%;
+    text-align: center;
+}
+
+/* 左右按钮 */
+.nav-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 99;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    opacity: 1;
+}
+
+.left-btn {
+    left: 20px;
+}
+
+.right-btn {
+    right: 20px;
+}
