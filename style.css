@@ -569,3 +569,215 @@ body {
     93% { opacity: 0.4; transform: translate(2px, 1px); }
     94% { opacity: 0.6; transform: translate(-3px, -2px); }
 }
+/* =========================================
+   GLOBAL RESET
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+
+
+/* =========================================
+   1. 封面 COVER
+========================================= */
+
+.cover {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;      /* 关键：不让内容泄露下去 */
+    z-index: 10;
+}
+
+/* 封面标题字母（保留你的闪电效果） */
+.cover-title {
+    font-size: 70px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    display: flex;
+    gap: 5px;
+}
+
+/* 右下角信息 */
+.cover-info {
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    text-align: right;
+}
+
+.name-line {
+    font-size: 20px;
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+}
+
+.underline {
+    width: 150px;
+    height: 1px;
+    background: white;
+    margin: 6px 0 10px auto;
+}
+
+.contact {
+    font-size: 18px;
+}
+
+
+
+/* =========================================
+   2. 翻页书本布局 BOOK
+========================================= */
+
+.book {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;   /* 每页占满屏幕 */
+    background: white;
+    z-index: 1;
+}
+
+/* 每一页 */
+.page {
+    position: absolute;
+    top: 0;
+    left: 100%;         /* 默认全部在屏幕右侧 */
+    width: 100%;
+    height: 100%;
+    background: white;
+    padding: 50px 70px;
+    transition: left 0.8s ease;
+}
+
+/* 当前页 */
+.page.active {
+    left: 0;
+}
+
+/* 上一页滑到左边 */
+.page.prev {
+    left: -100%;
+}
+
+
+
+/* =========================================
+   3. 每页顶部标题栏
+========================================= */
+
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.divider-line {
+    width: 100%;
+    height: 2px;
+    background: black;
+    margin-bottom: 100px;
+}
+
+
+/* =========================================
+   4. Welcome Page
+========================================= */
+
+.welcome-text {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.highlight {
+    font-weight: 900;
+    color: white;
+    -webkit-text-stroke: 1px black; /* 轮廓字效果 */
+}
+
+.intro-name {
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    margin-top: 80px;
+    margin-left: 0;
+}
+
+
+
+/* =========================================
+   5. Education Page
+========================================= */
+
+.intro-content {
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.intro-content h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.intro-content ul {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.intro-content li {
+    margin-bottom: 15px;
+}
+
+
+
+/* =========================================
+   6. 翻页按钮
+========================================= */
+
+.nav-btn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-btn { left: 20px; }
+.right-btn { right: 20px; }
+
+.nav-btn:hover {
+    background: rgba(0,0,0,0.7);
+}
