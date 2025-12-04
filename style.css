@@ -326,31 +326,32 @@ body {
     color: #fff;
 }
 
-/* ===== 封面右下角最终精细排版 ===== */
+/* ====== 最终版右下角精致排版 ====== */
 .cover-info {
     position: absolute;
-    bottom: 40px;
-    right: 60px;
+    bottom: 45px;
+    right: 70px;
     text-align: right;
-    font-weight: 300; /* 更细的字，优雅 */
-    line-height: 1.25; /* 紧凑行距 */
     font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
 }
 
-/* 名字 + 副标题行 */
+/* 名字行 */
 .name-line {
-    font-size: 16px;  /* 更小更专业 */
+    font-size: 15px;
     margin: 0;
-    display: flex;
+    display: inline-flex;      /* ← 保证整行不换行 */
+    white-space: nowrap;       /* ← 禁止换行！！ */
     gap: 6px;
     justify-content: flex-end;
     align-items: center;
     font-weight: 300;
 }
 
-/* 更长 & 更细的横线 */
+/* 横线（精致、细且更长） */
 .underline {
-    width: 300px;     /* 加长！ */
+    width: 300px;              /* ← 加长，让视觉更平衡 */
     height: 1px;
     background: #fff;
     margin: 6px 0 6px auto;
@@ -359,10 +360,12 @@ body {
 
 /* 邮箱行 */
 .contact {
-    font-size: 16px;
+    font-size: 15px;
     margin: 0;
     font-weight: 300;
+    letter-spacing: 0.5px;     /* 让字体更高级更容易对齐 */
 }
+
 
 /* ===== 覆盖原本动画，启用闪电劈中效果 ===== */
 .cover-title {
