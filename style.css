@@ -495,44 +495,7 @@ body {
     letter-spacing: 0.5px;     /* 让字体更高级更容易对齐 */
 }
 
-/* ===== PORTFOLIO 彩色闪电动画 ===== */
-.cover-title {
-    position: relative;
-    overflow: hidden;
-}
 
-/* 闪电效果伪元素 */
-.cover-title::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 120%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        rgba(255, 0, 150, 0) 0%,
-        rgba(255, 0, 150, 0.5) 20%,
-        rgba(0, 200, 255, 0.8) 50%,
-        rgba(255, 255, 0, 0.5) 80%,
-        rgba(255, 0, 150, 0) 100%
-    );
-    transform: skewX(-20deg);
-    animation: lightningSweep 2.5s linear infinite;
-}
-
-/* 动画：闪电滑动 */
-@keyframes lightningSweep {
-    0% {
-        left: -120%;
-    }
-    50% {
-        left: 100%;
-    }
-    100% {
-        left: 120%;
-    }
-}
 /* ===== 覆盖原本动画，启用闪电劈中效果 ===== */
 .cover-title {
     position: relative;
