@@ -333,21 +333,28 @@ body {
     right: 70px;
     text-align: right;
     font-family: "Helvetica", "Arial", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.2;
 }
 
 /* 名字行 */
 .name-line {
-    font-size: 15px;
+    font-size: 16px;
     margin: 0;
-    display: inline-flex;      /* ← 保证整行不换行 */
-    white-space: nowrap;       /* ← 禁止换行！！ */
+    display: inline-flex;
+    align-items: baseline;     /* ← 关键：让所有文字在同一基线对齐！ */
+    white-space: nowrap;
     gap: 6px;
-    justify-content: flex-end;
-    align-items: center;
-    font-weight: 300;
+    font-weight: 400;          /* ← 字再粗一点（稍微提升对比） */
+    letter-spacing: 0.5px;
 }
+
+.name-line span {
+    line-height: 1;            /* ← 消除默认行高差异 */
+    display: inline-block;
+    vertical-align: baseline;  /* ← 进一步保证字在同一条线上 */
+}
+
 
 /* 横线（精致、细且更长） */
 .underline {
