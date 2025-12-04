@@ -350,7 +350,7 @@ body {
 
 /* 更长 & 更细的横线 */
 .underline {
-    width: 260px;     /* 加长！ */
+    width: 300px;     /* 加长！ */
     height: 1px;
     background: #fff;
     margin: 6px 0 6px auto;
@@ -364,41 +364,70 @@ body {
     font-weight: 300;
 }
 
-/* ===== PORTFOLIO 彩色闪电动画 ===== */
+/* ===== 覆盖原本动画，启用闪电劈中效果 ===== */
 .cover-title {
     position: relative;
-    overflow: hidden;
+    font-weight: 900;
+    animation: lightningStrike 3s infinite;
 }
 
-/* 闪电效果伪元素 */
+/* 闪电击中效果 */
+@keyframes lightningStrike {
+    0%, 92%, 100% {
+        text-shadow: 0 0 0px #ffffff00;
+        opacity: 1;
+        transform: translate(0,0);
+    }
+    /* 第一闪 */
+    93% {
+        text-shadow: 0 0 15px #ffffff, 0 0 25px #4fc3f7;
+        opacity: 1;
+        transform: translate(2px, -2px);
+    }
+    /* 第二闪（更强） */
+    94% {
+        text-shadow: 0 0 25px #ffffff, 0 0 40px #82b1ff;
+        opacity: 1;
+        transform: translate(-3px, 3px);
+    }
+    /* 第三闪（快速回落） */
+    95% {
+        text-shadow: 0 0 10px #ffffff, 0 0 20px #4fc3f7;
+        opacity: 0.85;
+        transform: translate(1px, -1px);
+    }
+}
+
+/* 加入轻微的随机 glitch 抖动 */
+.cover-title::before,
 .cover-title::after {
-    content: "";
+    content: "PORTFOLIO.";
     position: absolute;
     top: 0;
-    left: -120%;
-    width: 120%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        rgba(255, 0, 150, 0) 0%,
-        rgba(255, 0, 150, 0.5) 20%,
-        rgba(0, 200, 255, 0.8) 50%,
-        rgba(255, 255, 0, 0.5) 80%,
-        rgba(255, 0, 150, 0) 100%
-    );
-    transform: skewX(-20deg);
-    animation: lightningSweep 2.5s linear infinite;
+    left: 0;
+    opacity: 0;
+    color: #fff;
+    pointer-events: none;
 }
 
-/* 动画：闪电滑动 */
-@keyframes lightningSweep {
-    0% {
-        left: -120%;
-    }
-    50% {
-        left: 100%;
-    }
-    100% {
-        left: 120%;
-    }
+.cover-title::before {
+    animation: glitchBefore 3s infinite;
+    color: #4fc3f7;  /* 冷光蓝 */
+}
+
+.cover-title::after {
+    animation: glitchAfter 3s infinite;
+    color: #ff4081;  /* 电光粉 */
+}
+
+@keyframes glitchBefore {
+    0%, 95%, 100% { opacity: 0; transform: none; }
+    93% { opacity: 0.5; transform: translate(-2px, -1px); }
+    94% { opacity: 0.7; transform: translate(3px, 2px); }
+}
+
+@keyframes glitchAfter {
+    0%, 95%, 100% { opacity: 0; transform: none; }
+    93% { opacity: 0.4; transform: translate(2px, 1px); }
+    94% { opacity: 0.6; transform: translate(-3px, -2px); }
 }
