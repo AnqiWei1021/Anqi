@@ -618,3 +618,12 @@ body {
 .page.prev {
     left: -100%;
 }
+.cover {
+    position: relative;
+    z-index: 1 !important;
+}
+.nav-btn {
+    position: fixed !important;
+    z-index: 999999999 !important;
+    pointer-events: auto !important; /* 允许点击 */
+}
