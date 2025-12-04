@@ -483,12 +483,13 @@ body {
     font-size: 40px;
     background: none;
     border: none;
-    color: white;
+    color: #444;   /* ← 深灰色 */
     cursor: pointer;
     z-index: 99;
-    opacity: 0.5;
+    opacity: 0.7;  /* ← 你想要更亮可以调高，比如 0.9 */
     transition: 0.3s;
 }
+
 
 .nav-btn:hover {
     opacity: 1;
