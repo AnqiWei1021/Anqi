@@ -1,119 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio – Anqi Wei</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+    margin: 0;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
 
-<body>
-
-    <!-- ===== 封面 ===== -->
-    <section class="cover">
-        <h1 class="cover-title" id="title">
-            <span class="letter">P</span>
-            <span class="letter">O</span>
-            <span class="letter">R</span>
-            <span class="letter">T</span>
-            <span class="letter">F</span>
-            <span class="letter">O</span>
-            <span class="letter">L</span>
-            <span class="letter">I</span>
-            <span class="letter">O</span>
-            <span class="letter">.</span>
-        </h1>
-
-        <div class="cover-info">
-            <p class="name-line">
-                <span class="name">Anqi Wei</span>
-                <span class="divider">—</span>
-                <span class="subtitle">Portfolio</span>
-            </p>
-
-            <div class="underline"></div>
-            <p class="contact">125101394@umail.ucc.ie</p>
-        </div>
-    </section>
-
-
-
-    <!-- ======（恢复你的动画区域）======= -->
-    <div class="center-wrapper">
-        <div id="text-container" class="container"></div>
-    </div>
-
-
-
-    <!-- ===== 翻页书本 ===== -->
-    <div class="book">
-
-        <!-- 第 1 页 -->
-        <section class="page welcome-page">
-            <div class="top-bar">
-                <span>ANQI PORTFOLIO</span>
-                <span>01</span>
-            </div>
-
-            <div class="divider-line"></div>
-
-            <h1 class="welcome-text">
-                WELCOME TO <span class="highlight">ANQI’s</span> PORTFOLIO.
-            </h1>
-
-            <h2 class="intro-name">ANQIWEI</h2>
-        </section>
-
-        <!-- 第 2 页 -->
-        <section class="page intro-page">
-            <div class="top-bar">
-                <span>ANQI PORTFOLIO</span>
-                <span>02</span>
-            </div>
-
-            <div class="divider-line"></div>
-
-            <h1 class="intro-name">ANQIWEI</h1>
-
-            <div class="intro-content">
-                <h3>Education:</h3>
-                <ul>
-                    <li><b>09/2017 – 07/2021</b><br>
-                        Gingko College of Hospitality Management, China<br>
-                        BA in Visual Communication Design (awarded)
-                    </li>
-
-                    <li><b>09/2025 – NOW</b><br>
-                        University College Cork, Ireland<br>
-                        MA in Digital Arts & Humanities
-                    </li>
-                </ul>
-
-                <h3>Design Competition:</h3>
-                <p>
-                    2020 Academy Award of Advertising Festival of Chinese College Students,<br>
-                    <b>National Excellence Award for Product Packaging Design</b><br><br>
-
-                    2019 Academy Award of Advertising Festival of Chinese College Students,<br>
-                    <b>National Excellence Award for Graphic Design</b>
-                </p>
-            </div>
-        </section>
-
-    </div>
-
-
-
-    <!-- 翻页按钮 -->
-    <button class="nav-btn left-btn">❮</button>
-    <button class="nav-btn right-btn">❯</button>
-
-    <!-- JS -->
-    <script src="script.js"></script>
-
-</body>
-</html>
+/* 全体居中容器 */
 .center-wrapper {
-    position: relative;
-    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 真正垂直居中 */
+}
+
+.container {
+    display: flex;
+    gap: 18px;   /* 字之间的距离 */
+}
+
+/* 每个字母 + 一条线 */
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 线条——更细、更短、更轻 */
+.line {
+    width: 1px;
+    background: black;
+    opacity: 0.9;
+    
+    /* 从顶部掉下来动画 */
+    transform-origin: top;
+    animation: drop 0.9s ease-out forwards, sway 3s ease-in-out infinite;
+}
+
+/* 字母 */
+.letter {
+    margin-top: 10px; /* 字母与线条距离 */
+    font-size: 18px; 
+    font-weight: 600; /* 略微加粗 */
+
+    opacity: 0;
+    animation: fade-in 0.9s ease-out forwards;
+}
+
+/* --- 动画定义 --- */
+
+@keyframes drop {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(-8px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 微微摆动 */
+@keyframes sway {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(1.4deg); }
+    100% { transform: rotate(0deg); }
 }
