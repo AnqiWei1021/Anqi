@@ -37,19 +37,11 @@
     </section>
 
 
-
-    <!-- ===== 动画区域 ===== -->
-    <div class="center-wrapper">
-        <div id="text-container" class="container"></div>
-    </div>
-
-
-
-    <!-- ===== 翻页书本开始（所有 page 必须在这里！）===== -->
+    <!-- ======= 翻页书本主体 ======= -->
     <div class="book">
 
         <!-- 第 1 页：Welcome -->
-        <section class="page welcome-page">
+        <section class="page welcome-page active">
             <div class="top-bar">
                 <span>ANQI PORTFOLIO</span>
                 <span>01</span>
@@ -74,17 +66,17 @@
 
             <div class="divider-line"></div>
 
-            <h1 class="intro-name">ANQIWEI</h1>
+            <h2 class="intro-name">ANQIWEI</h2>
 
             <div class="intro-content">
                 <h3>Education:</h3>
                 <ul>
-                    <li><b>09/2017 – 07/2021</b><br>
+                    <li><strong>09/2017 – 07/2021</strong><br>
                         Gingko College of Hospitality Management, China<br>
                         BA in Visual Communication Design (awarded)
                     </li>
 
-                    <li><b>09/2025 – NOW</b><br>
+                    <li><strong>09/2025 – NOW</strong><br>
                         University College Cork, Ireland<br>
                         MA in Digital Arts & Humanities
                     </li>
@@ -93,24 +85,50 @@
                 <h3>Design Competition:</h3>
                 <p>
                     2020 Academy Award of Advertising Festival of Chinese College Students,<br>
-                    <b>National Excellence Award for Product Packaging Design</b><br><br>
+                    <strong>National Excellence Award for Product Packaging Design</strong><br><br>
 
                     2019 Academy Award of Advertising Festival of Chinese College Students,<br>
-                    <b>National Excellence Award for Graphic Design</b>
+                    <strong>National Excellence Award for Graphic Design</strong>
                 </p>
             </div>
         </section>
 
     </div>
-    <!-- ===== 翻页书本结束 ===== -->
 
 
-
-    <!-- 翻页按钮（放在 book 外面） -->
+    <!-- 翻页按钮 -->
     <button class="nav-btn left-btn">❮</button>
     <button class="nav-btn right-btn">❯</button>
 
-    <script src="script.js"></script>
+
+    <!-- 翻页脚本 -->
+    <script>
+        let currentPage = 0;
+        const pages = document.querySelectorAll(".page");
+        const totalPages = pages.length;
+
+        function showPage(index) {
+            pages.forEach((p, i) => {
+                p.classList.remove("active", "prev");
+                if (i === index) p.classList.add("active");
+                if (i === index - 1) p.classList.add("prev");
+            });
+        }
+
+        document.querySelector(".right-btn").addEventListener("click", () => {
+            if (currentPage < totalPages - 1) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+
+        document.querySelector(".left-btn").addEventListener("click", () => {
+            if (currentPage > 0) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+    </script>
 
 </body>
 </html>
