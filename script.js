@@ -26,3 +26,39 @@ document.addEventListener("DOMContentLoaded", () => {
         container.appendChild(block);
     });
 });
+       ======================= */
+    const pages = document.querySelectorAll(".page");
+    const leftBtn = document.querySelector(".left-btn");
+    const rightBtn = document.querySelector(".right-btn");
+    let currentPage = 0;
+
+    function showPage(index) {
+        pages.forEach((p, i) => {
+            p.classList.remove("active", "prev");
+
+            if (i === index) p.classList.add("active");
+            if (i === index - 1) p.classList.add("prev");
+        });
+    }
+
+    if (rightBtn) {
+        rightBtn.addEventListener("click", () => {
+            if (currentPage < pages.length - 1) {
+                currentPage++;
+                showPage(currentPage);
+            }
+        });
+    }
+
+    if (leftBtn) {
+        leftBtn.addEventListener("click", () => {
+            if (currentPage > 0) {
+                currentPage--;
+                showPage(currentPage);
+            }
+        });
+    }
+
+    // 初始化第一页
+    showPage(0);
+});
