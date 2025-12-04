@@ -546,3 +546,12 @@ body {
     -webkit-text-stroke: 1px black; /* 轮廓字效果 */
     color: white;
 }
+/* ---------- ANQIWEI 艺术字 ---------- */
+.intro-name {
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif; /* 比较接近原 PDF 粗方体风格 */
+    font-size: 90px;
+    font-weight: 900;
+    letter-spacing: -3px;   /* 字间距变紧，接近 PDF */
+    transform: scaleX(1.05);  /* 横向轻微拉宽，还原 PDF 效果 */
+    margin: 40px 0 60px;
+}
