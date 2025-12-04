@@ -302,4 +302,59 @@ body {
     margin-top: -40px !important;
 }
 
+/* 封面整体 */
+.cover {
+    background: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+/* 中间的大标题 */
+.cover-title {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin: 0;
+}
+
+/* 右下角信息区域 */
+.cover-info {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    text-align: right;
+    font-family: inherit;
+}
+
+/* 名字那一行 */
+.name-line {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 0;
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.underline {
+    width: 120px;
+    height: 1px;
+    background: #fff;
+    margin: 6px 0 4px auto;
+}
+
+/* 邮箱文字 */
+.contact {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* 艺术字体可根据需要调整，如果你有指定字体文件可加入 @font-face */
 
