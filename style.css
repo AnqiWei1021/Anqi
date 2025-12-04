@@ -997,3 +997,58 @@ body {
     margin-top: 10px;
     text-align: left;
 }
+/* ============================
+   第三页：Illustration Page
+============================ */
+
+.illustration-page {
+    background: #000;   /* 整页黑色背景 */
+    color: white;
+    width: 100%;
+    height: 100vh;        /* 保持一页高度 */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* 上方横线部分恢复正常亮色 */
+.illustration-page .divider-line {
+    border-top: 2px solid #555;  /* 灰色线，黑底可见 */
+    margin-top: 10px;
+}
+
+/* 图片区域：等高显示，没有留白 */
+.illu-images {
+    width: 100%;
+    height: 55vh; /* 控制图片高度，避免撑破页面 */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.illu-images img {
+    width: 24.5%;       /* 4 张图紧贴分布 */
+    height: 100%;       /* 填满容器高度 */
+    object-fit: cover;  /* 裁切保持满框，不留白 */
+    background: black;
+}
+
+/* ILLUSTRATION DESIGN 字体 */
+.illu-title {
+    width: 100%;
+    font-family: "Arial Black";
+    font-size: 44px;
+    font-weight: 900;
+    margin-top: 25px;
+}
+
+/* 说明文字 */
+.illu-text {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 10px;
+    max-width: 900px;
+}
