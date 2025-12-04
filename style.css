@@ -441,3 +441,47 @@ body {
     93% { opacity: 0.4; transform: translate(2px, 1px); }
     94% { opacity: 0.6; transform: translate(-3px, -2px); }
 }
+/* === 放大镜本体 === */
+.magnifier {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid white;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: moveMagnifier 4s linear infinite;
+}
+
+/* 放大镜把手 */
+.magnifier::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 5px;
+    background: white;
+    right: -10px;
+    bottom: -5px;
+    transform: rotate(35deg);
+    border-radius: 5px;
+}
+
+/* === 放大镜左右移动动画 === */
+@keyframes moveMagnifier {
+    0% { left: 0%; }
+    100% { left: 100%; }
+}
+
+/* === 字母基础 === */
+.letter {
+    display: inline-block;
+    transition: transform 0.25s ease, text-shadow 0.25s ease;
+}
+
+/* 放大镜经过时放大效果 */
+.letter.active {
+    transform: scale(1.4);
+    text-shadow: 0 0 10px white;
+}
