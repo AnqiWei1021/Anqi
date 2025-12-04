@@ -68,3 +68,43 @@ body {
     50%  { transform: rotate(1.4deg); }
     100% { transform: rotate(0deg); }
 }
+/* Portfolio Page */
+.portfolio-wrapper {
+    padding: 60px 10%;
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+}
+
+.portfolio-wrapper h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.pdf-button {
+    display: inline-block;
+    padding: 10px 18px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.pdf-button:hover {
+    opacity: 0.8;
+}
+
+.project {
+    margin: 40px 0;
+}
+
+.project h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
