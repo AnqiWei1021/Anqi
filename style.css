@@ -111,3 +111,35 @@ body {
     50%  { transform: translateX(2px); }
     100% { transform: translateX(0px); }
 }
+/* 导航栏上下横线 */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    position: relative;
+    padding: 12px 0;
+}
+
+.navbar::before,
+.navbar::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background-color: black;
+}
+
+/* 上横线 */
+.navbar::before {
+    top: 0;
+}
+
+/* 下横线 */
+.navbar::after {
+    bottom: 0;
+}
