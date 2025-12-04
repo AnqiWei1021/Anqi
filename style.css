@@ -299,6 +299,7 @@ body {
     width: 80%;   /* 横线宽度可调：80% 比较优雅 */
 }
 .my-info {
-    margin-top: -40px;
+    margin-top: -40px !important;
 }
+
 
