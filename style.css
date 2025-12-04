@@ -326,41 +326,44 @@ body {
     color: #fff;
 }
 
-/* ===== 右下角信息更精确排版 ===== */
+/* ===== 封面右下角最终精细排版 ===== */
 .cover-info {
     position: absolute;
     bottom: 40px;
-    right: 50px;
+    right: 60px;
     text-align: right;
-    line-height: 1.2; /* 更紧凑 */
-    font-weight: 400; /* 字体不要太粗 */
+    font-weight: 300; /* 更细的字，优雅 */
+    line-height: 1.25; /* 紧凑行距 */
+    font-family: "Helvetica", "Arial", sans-serif;
 }
 
-/* 名字这一行 */
+/* 名字 + 副标题行 */
 .name-line {
-    font-size: 18px;
+    font-size: 16px;  /* 更小更专业 */
     margin: 0;
     display: flex;
     gap: 6px;
     justify-content: flex-end;
     align-items: center;
-    font-weight: 500;
+    font-weight: 300;
 }
 
-/* 精致细线条 */
+/* 更长 & 更细的横线 */
 .underline {
-    width: 160px;      /* 稍微长一点，更高级 */
+    width: 260px;     /* 加长！ */
     height: 1px;
     background: #fff;
     margin: 6px 0 6px auto;
+    opacity: 0.85;
 }
 
-/* 邮箱文字 */
+/* 邮箱行 */
 .contact {
-    font-size: 18px;
+    font-size: 16px;
     margin: 0;
-    font-weight: 500;
+    font-weight: 300;
 }
+
 /* ===== PORTFOLIO 彩色闪电动画 ===== */
 .cover-title {
     position: relative;
