@@ -445,6 +445,10 @@ body {
     text-align: center;
     font-family: "Arial Black", "Helvetica Neue", sans-serif;
 }
+/* 调整封面发光大字的位置 */
+.cover-title {
+    margin-top: -120px; /* 往上移动，你可以继续调整 */
+}
 
 /* ===== 中间 PORTFOLIO. ===== */
 .cover-title {
