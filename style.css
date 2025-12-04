@@ -702,6 +702,20 @@ body {
 /* =========================================
    4. Welcome Page
 ========================================= */
+/* Welcome 第一页布局 */
+.welcome-page {
+    background: white;
+    color: black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   /* 内容垂直居中 */
+
+    height: 100vh;             /* 占满整个屏幕 */
+    box-sizing: border-box;
+    padding: 0;
+}
 
 .welcome-text {
     font-size: 36px;
