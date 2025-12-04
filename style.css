@@ -502,3 +502,47 @@ body {
 .right-btn {
     right: 20px;
 }
+/* ----------- Welcome 第一页布局 ----------- */
+
+.welcome-page {
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+    box-sizing: border-box;
+    justify-content: flex-start;
+}
+
+/* 顶部标题栏 */
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* 顶部横线 */
+.divider-line {
+    width: 100%;
+    height: 2px;
+    background: black;
+    margin-bottom: 120px;
+}
+
+/* 中间欢迎文字 */
+.welcome-text {
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.highlight {
+    font-weight: 900;
+    -webkit-text-stroke: 1px black; /* 轮廓字效果 */
+    color: white;
+}
