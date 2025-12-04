@@ -1,184 +1,113 @@
+/* ----------- 全局基础样式 ----------- */
 body {
     margin: 0;
-    background: white;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden;
+    background: white;
+    text-align: center;
 }
 
-/* 全体居中容器 */
+/* ----------- 标题区 ----------- */
+.main-header h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-top: 60px;   /* 向下移动标题 */
+    margin-bottom: 10px;
+}
+
+.main-header p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* ----------- 导航栏 ----------- */
+.navbar {
+    margin-top: 25px;
+    margin-bottom: 60px;
+    padding: 12px 0;
+
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+    justify-content: center;
+    gap: 60px;   /* 三个按钮间距更大 */
+}
+
+.navbar a {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* ----------- 外层 wrapper，让动画整体上移 ----------- */
 .center-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh; /* 真正垂直居中 */
+    margin-top: -100px;   /* 数值越小越往上，可以调整 */
 }
 
+/* ----------- 动画容器 ----------- */
 .container {
     display: flex;
-    gap: 18px;   /* 字之间的距离 */
+    justify-content: center;
+    gap: 18px;   /* 字母之间间距 */
 }
 
-/* 每个字母 + 一条线 */
+/* ----------- 每个字母 + 线条的组合 ----------- */
 .block {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* 线条——更细、更短、更轻 */
+/* ----------- 线条样式 ----------- */
 .line {
-    width: 1px;
-    background: black;
-    opacity: 0.9;
-    
-    /* 从顶部掉下来动画 */
-    transform-origin: top;
-    animation: drop 0.9s ease-out forwards, sway 3s ease-in-out infinite;
-}
-
-/* 字母 */
-.letter {
-    margin-top: 10px; /* 字母与线条距离 */
-    font-size: 18px; 
-    font-weight: 600; /* 略微加粗 */
-
+    width: 1px;              /* 更细 */
+    background-color: #555;  /* 线条颜色 */
+    height: 180px;           /* 基础长度 */
     opacity: 0;
-    animation: fade-in 0.9s ease-out forwards;
+
+    animation: dropLine 1.8s ease forwards;
 }
 
-/* --- 动画定义 --- */
+/* ----------- 字母样式 ----------- */
+.letter {
+    font-size: 16px;   /* 更小 */
+    font-weight: 600;  /* 更粗 */
+    margin-top: 6px;
+    opacity: 0;
 
-@keyframes drop {
+    animation: fadeIn 1s ease forwards, wobble 3s ease-in-out infinite;
+}
+
+/* ----------- 线条下落动画 ----------- */
+@keyframes dropLine {
     0% {
-        transform: scaleY(0);
+        height: 0;
+        opacity: 0;
+        transform: translateY(-50px);
     }
     100% {
-        transform: scaleY(1);
+        opacity: 1;
     }
 }
 
-@keyframes fade-in {
-    0% { opacity: 0; transform: translateY(-8px); }
+/* ----------- 字母淡入动画 ----------- */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
-/* 微微摆动 */
-@keyframes sway {
-    0%   { transform: rotate(0deg); }
-    50%  { transform: rotate(1.4deg); }
-    100% { transform: rotate(0deg); }
-}
-/* Portfolio Page */
-.portfolio-wrapper {
-    padding: 60px 10%;
-    max-width: 900px;
-    margin: auto;
-    text-align: left;
-}
-
-.portfolio-wrapper h1 {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.subtitle {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.pdf-button {
-    display: inline-block;
-    padding: 10px 18px;
-    background: black;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: 0.2s;
-}
-
-.pdf-button:hover {
-    opacity: 0.8;
-}
-
-.project {
-    margin: 40px 0;
-}
-
-.project h2 {
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-/* --- Top Navigation Bar --- */
-.top-nav {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 30px;
-    font-size: 14px;
-    z-index: 999; /* 确保导航在最上层 */
-}
-
-.top-nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    opacity: 0.7;
-    transition: 0.2s;
-}
-
-.top-nav a:hover {
-    opacity: 1;
-}
-/* 整体置中排列 */
-.main-header {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-}
-
-/* 大标题：更大更粗 */
-.main-header h1 {
-    font-size: 32px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-}
-
-/* 副标题：更小更细 */
-.main-header h2 {
-    font-size: 18px;
-    font-weight: 300;
-    color: #555;
-    margin-bottom: 25px;
-}
-
-/* 导航栏 */
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 40px; /* 调整导航间距 */
-    font-size: 18px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
-.main-header {
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 80px; /* 增加与动画的距离 */
-}
-
-.navbar {
-    margin-top: 20px;  /* 导航与副标题间距 */
-    margin-bottom: 40px; /* 导航与动画间距 */
+/* ----------- 微微摆动动画（更艺术感） ----------- */
+@keyframes wobble {
+    0%   { transform: translateX(0px); }
+    50%  { transform: translateX(2px); }
+    100% { transform: translateX(0px); }
 }
