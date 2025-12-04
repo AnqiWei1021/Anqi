@@ -487,7 +487,7 @@ body {
 
 /* 横线（精致、细且更长） */
 .underline {
-    width: 150px;              /* ← 加长，让视觉更平衡 */
+    width: 198px;              /* ← 加长，让视觉更平衡 */
     height: 1px;
     background: #fff;
     margin: 6px 0 6px auto;
