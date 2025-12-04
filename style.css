@@ -880,3 +880,33 @@ body {
 .right-col p {
     line-height: 1.4;
 }
+.intro-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 60px;
+    box-sizing: border-box;
+}
+.intro-name {
+    font-family: "Arial Black", "Helvetica Neue", sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -3px;
+}
+.intro-content {
+    width: 50%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.intro-content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.intro-content ul {
+    padding-left: 20px;
+}
