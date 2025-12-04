@@ -455,32 +455,38 @@ body {
     color: #fff;
 }
 
-/* ===== 右下角信息区域 ===== */
+/* ===== 右下角信息更精确排版 ===== */
 .cover-info {
     position: absolute;
-    bottom: 30px;
-    right: 40px;
+    bottom: 40px;
+    right: 50px;
     text-align: right;
+    line-height: 1.2; /* 更紧凑 */
+    font-weight: 400; /* 字体不要太粗 */
 }
 
-/* 名字那一行 */
+/* 名字这一行 */
 .name-line {
-    font-size: 20px;
+    font-size: 18px;
     margin: 0;
     display: flex;
     gap: 6px;
     justify-content: flex-end;
     align-items: center;
+    font-weight: 500;
 }
 
+/* 精致细线条 */
 .underline {
-    width: 140px;
+    width: 160px;      /* 稍微长一点，更高级 */
     height: 1px;
     background: #fff;
-    margin: 6px 0 4px auto;
+    margin: 6px 0 6px auto;
 }
 
+/* 邮箱文字 */
 .contact {
-    font-size: 20px;
+    font-size: 18px;
     margin: 0;
+    font-weight: 500;
 }
