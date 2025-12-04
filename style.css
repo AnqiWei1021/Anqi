@@ -688,14 +688,16 @@ body {
     justify-content: space-between;
     font-weight: 700;
     font-size: 16px;
-    margin-bottom: 12px;
+    margin-top: -40px;   /* 👈 新增：整体上移 */
+    margin-bottom: 5px;  /* 看你喜欢，可以改小一点 */
 }
 
 .divider-line {
     width: 100%;
     height: 2px;
     background: black;
-    margin-bottom: 100px;
+     margin-top: -20px;   /* 👈 新增：横线也上移 */
+    margin-bottom: 80px; /* 看你喜欢 */
 }
 
 
