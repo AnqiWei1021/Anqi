@@ -1074,81 +1074,72 @@ body {
     line-height: 1.7;
     max-width: 430px;
 }
-/* ===== 第四页 ===== */
+/* ========== 第四页 ========== */
 
-.first-design-page {
-    padding: 40px;
-}
-
-/* 整体包裹，不让说明文字跑偏 */
-.illustration-wrapper {
+.design4-wrapper {
     width: 100%;
+    margin-top: 20px;
 }
 
-/* 黑色背景的图片大区域 */
-.illustration-box {
-    background: #000;
-    padding: 30px;
+.black-box {
+    width: 100%;
+    background: black;
+    padding: 40px 50px;
     display: flex;
-    justify-content: flex-start;
-    gap: 30px;
-    align-items: center;  /* ✔右侧四张图垂直居中 */
+    align-items: center;
+    gap: 50px;
 }
 
-/* 左侧竖排文字 */
-.vertical-text {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    font-size: 70px;
-    font-weight: 900;
+/* FIRST DESIGN 竖排 */
+.fd-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: white;
+    font-weight: 900;
+    font-size: 65px;
     line-height: 1;
-    margin-right: 20px;
+    letter-spacing: 5px;
 }
 
-/* 主插画 */
-.main-illustration {
-    width: 260px;
-    border: 8px solid #000;
+.fd-vertical .space {
+    height: 40px;
 }
 
-/* 中间瀑布 */
-.ref-forest {
+/* 主插画 & 瀑布 */
+.d4-main {
     width: 260px;
 }
 
-/* 右边四张图 */
-.ref-small-group {
+.d4-forest {
+    width: 260px;
+    margin-left: 20px;
+}
+
+/* 右边四张参考图 */
+.d4-refs {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 150px);
+    grid-auto-rows: 150px;
     gap: 15px;
 }
 
-.ref-small-group img {
-    width: 140px;
-    height: 140px;
+.d4-refs img {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
 }
 
-/* 两段说明文字（必须对齐） */
-.caption-row {
-    margin-top: 20px;
+/* 第一排说明 */
+.d4-caption-row {
+    margin-top: 25px;
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+    padding: 0 50px;
 }
 
-.caption-center {
-    flex: 1;
+.d4-bottom-text {
     text-align: center;
-}
-
-.caption-right {
-    flex: 1;
-    text-align: right;
-}
-
-.bottom-description {
-    margin-top: 20px;
-    text-align: center;
+    margin-top: 15px;
 }
