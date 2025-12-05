@@ -1168,13 +1168,15 @@ body {
 
 /* 右侧小图下面的说明（黑框内白字） */
 .design-caption-right {
-    margin-top: 20px;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 100px;   /* ← 往下移动 20px，数字可调整 */
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  /* 保留您想要的间距即可，例如 100px */
+  margin-top: 100px; 
 }
+/* 确保没有其他 top, right, position 属性影响它。 */
+
 
 /* 黑框外底部说明文字 */
 .design-bottom-text {
