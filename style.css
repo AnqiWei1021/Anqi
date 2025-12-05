@@ -1089,16 +1089,17 @@ body {
 /* 黑色大背景 */
 .design-section {
     background: #000;
-    margin: 0 40px 40px;
+    margin: 0 0 40px 0;   /* <- 黑色背景贴左边 */
     padding: 40px 40px 50px;
     display: grid;
-    grid-template-columns: 120px 1.1fr 1fr; /* 左竖条 / 中间两张图 / 右边四张图 */
+    grid-template-columns: 160px 1.1fr 1fr;  /* 左侧宽度加大 */
     column-gap: 40px;
     align-items: start;
 }
 
 /* 左侧竖排 FIRST DESIGN 区域 */
 .design-sidebar {
+    width: 160px;  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1110,9 +1111,11 @@ body {
     font-size: 42px;
     letter-spacing: 4px;
     white-space: nowrap;
-    transform: rotate(-90deg);          /* 整个单词旋转一排 */
+    transform: rotate(-90deg); /单词旋转/
     transform-origin: center;
+    display: block;
 }
+
 
 /* 中间：主插画 + 瀑布图 */
 .design-left-group {
