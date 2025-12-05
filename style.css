@@ -997,132 +997,80 @@ body {
     margin-top: 10px;
     text-align: left;
 }
-/* ================================
-   Illustration Page（第三页）样式
+
+ /* ================================
+   Illustration Page（第三页）
 ================================ */
 
-/* 整页区域 */
 .illustration-page {
-    width: 100%;
-    min-height: 100vh;
-    background: white;     /* 整页白色背景 */
-    padding: 40px 5%;
+    background: #ffffff;
+    padding: 40px 0;
     box-sizing: border-box;
 }
 
-/* 顶部标题栏 */
+/* 内层居中容器，控制整页宽度 */
+.illustration-inner {
+    max-width: 1100px;   /* 控制页面内容宽度，类似PPT画面宽度 */
+    margin: 0 auto 60px;
+}
+
+/* 顶部条 */
 .illustration-page .top-bar {
     display: flex;
     justify-content: space-between;
     font-weight: 700;
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
-/* 顶部横线 */
-.illustration-page .divider-line {
+/* 顶部横线（单独取类，避免别的页面的 divider 影响） */
+.illustration-divider {
     width: 100%;
     height: 2px;
-    background: black;
-    margin-bottom: 35px;
+    background: #000;
+    margin-bottom: 30px;
 }
 
-/* ==========================
-   黑色背景 + 四张图片区域
-========================== */
+/* 黑色背景 + 四图 */
 .illustration-images-wrapper {
-    background: black;         /* 整块黑色背景 */
-    padding: 25px;             /* 黑色边距 */
+    background: #111;
+    padding: 24px;
     display: flex;
-    justify-content: center;
-    gap: 25px;                 /* 图片之间间隙 */
-    margin-bottom: 50px;       /* 与下方标题距离 */
+    justify-content: space-between;
+    gap: 22px;
+    box-sizing: border-box;
 }
 
-/* 单张图片 */
+/* 四张图 */
 .illustration-img {
-    height: 480px;             /* 可微调高度 */
-    width: auto;
-    object-fit: cover;
+    width: 23%;
+    height: 420px;          /* 高度接近PPT */
+    object-fit: cover;      /* 保持比例，超出的部分裁掉 */
     display: block;
 }
 
-/* ==========================
-   下方标题 “ILLUSTRATION DESIGN”
-========================== */
+/* 底部两列布局：左标题，右说明 */
+.illustration-bottom {
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+/* 左侧大标题 */
 .illustration-title {
+    margin: 0;
     font-size: 48px;
     font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 25px;
-}
-
-/* ==========================
-   底部说明文字
-========================== */
-.illustration-desc {
-    font-size: 15px;
-    line-height: 1.6;
-    max-width: 640px;
-}
-/* 整块 Illustration 页面 */
-.illustration-page {
-    width: 100%;
-    background: white;
-    padding: 40px 5%;
-    box-sizing: border-box;
-}
-
-/* 顶部文字 + 页码 */
-.illustration-page .top-bar {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-/* 顶部横线 */
-.illustration-page .divider-line {
-    width: 100%;
-    height: 2px;
-    background: black;
-    margin-bottom: 40px;
-}
-
-/* 黑色背景包围四张图片 */
-.illustration-images-wrapper {
-    background: black;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    height: 380px; /* ⭐固定高度，防止无限撑大 */
-    box-sizing: border-box;
-}
-
-/* 每张图 */
-.illustration-images-wrapper img {
-    width: 22%;         /* 并排四张 */
-    height: 100%;       /* 填满黑色区域高度 */
-    object-fit: cover;  /* ⭐自动裁切填充，避免变形 */
-    background: black;  
-}
-
-/* 底部标题 */
-.illustration-title {
-    margin-top: 40px;
-    font-size: 40px;
-    font-weight: 900;
-    line-height: 1.2;
+    line-height: 1.05;
     text-align: left;
 }
 
-/* 描述文字 */
+/* 右侧说明文字 */
 .illustration-desc {
-    margin-top: 20px;
+    margin: 8px 0 0;
     font-size: 14px;
-    line-height: 1.6;
-    max-width: 700px;
+    line-height: 1.7;
+    max-width: 430px;
 }
-
