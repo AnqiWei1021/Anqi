@@ -1074,72 +1074,70 @@ body {
     line-height: 1.7;
     max-width: 430px;
 }
-/* ========== 第四页 ========== */
+/* ===== 第4页：First Design ===== */
 
-.design4-wrapper {
-    width: 100%;
-    margin-top: 20px;
+.design-page {
+    padding-bottom: 120px;
 }
 
-.black-box {
-    width: 100%;
-    background: black;
-    padding: 40px 50px;
+/* 黑色背景整体容器 */
+.design-wrapper {
+    background: #000;
+    margin-top: 40px;
+    padding: 40px 40px;
     display: flex;
-    align-items: center;
-    gap: 50px;
+    align-items: flex-start;
+    gap: 40px;
 }
 
-/* FIRST DESIGN 竖排 */
-.fd-vertical {
+/* 左边竖排文字 */
+.design-title {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: white;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-right: 20px;
+}
+
+/* 左大图 */
+.design-main-img {
+    width: 280px;
+    height: auto;
+}
+
+/* 中间瀑布图 */
+.design-mid-img {
+    width: 260px;
+    height: auto;
+}
+
+/* 右侧四张图排列 */
+.design-ref-group {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: white;
-    font-weight: 900;
-    font-size: 65px;
-    line-height: 1;
-    letter-spacing: 5px;
+    gap: 20px;
 }
 
-.fd-vertical .space {
-    height: 40px;
-}
-
-/* 主插画 & 瀑布 */
-.d4-main {
-    width: 260px;
-}
-
-.d4-forest {
-    width: 260px;
-    margin-left: 20px;
-}
-
-/* 右边四张参考图 */
-.d4-refs {
-    display: grid;
-    grid-template-columns: repeat(2, 150px);
-    grid-auto-rows: 150px;
-    gap: 15px;
-}
-
-.d4-refs img {
-    width: 150px;
+.design-ref-group img {
+    width: 200px;
     height: 150px;
     object-fit: cover;
 }
 
-/* 第一排说明 */
-.d4-caption-row {
-    margin-top: 25px;
+/* 下方两段小标题 */
+.design-caption-row {
     display: flex;
     justify-content: space-between;
-    font-weight: bold;
-    padding: 0 50px;
+    margin: 20px 40px 0;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.d4-bottom-text {
+/* 最底部说明文字 */
+.design-bottom-note {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 20px;
+    font-size: 15px;
 }
