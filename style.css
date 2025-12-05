@@ -1074,38 +1074,36 @@ body {
     line-height: 1.7;
     max-width: 430px;
 }
-/* ===== 第四页容器 ===== */
+/* ===== 第四页 ===== */
+
 .first-design-page {
-    padding: 40px 40px;
+    padding: 40px;
 }
 
-/* 左右排版结构 */
-.first-design-container {
+/* 整体包裹，不让说明文字跑偏 */
+.illustration-wrapper {
+    width: 100%;
+}
+
+/* 黑色背景的图片大区域 */
+.illustration-box {
+    background: #000;
+    padding: 30px;
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: center;  /* ✔右侧四张图垂直居中 */
 }
 
-/* ===== 左侧竖排 FIRST DESIGN ===== */
+/* 左侧竖排文字 */
 .vertical-text {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     font-size: 70px;
     font-weight: 900;
-    color: #fff;
-    background: #000;
-    padding: 20px 0;
-    text-align: center;
-    line-height: 1.1;
-}
-
-/* ===== 黑色背景的图片区 ===== */
-.illustration-box {
-    background: #000;
-    padding: 30px;
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
+    color: white;
+    line-height: 1;
+    margin-right: 20px;
 }
 
 /* 主插画 */
@@ -1114,12 +1112,12 @@ body {
     border: 8px solid #000;
 }
 
-/* 中间瀑布图 */
+/* 中间瀑布 */
 .ref-forest {
     width: 260px;
 }
 
-/* 四张小图组合 */
+/* 右边四张图 */
 .ref-small-group {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1132,7 +1130,7 @@ body {
     object-fit: cover;
 }
 
-/* ===== 下方说明文字 ===== */
+/* 两段说明文字（必须对齐） */
 .caption-row {
     margin-top: 20px;
     display: flex;
@@ -1141,17 +1139,16 @@ body {
 }
 
 .caption-center {
-    text-align: center;
     flex: 1;
+    text-align: center;
 }
 
 .caption-right {
-    text-align: right;
     flex: 1;
+    text-align: right;
 }
 
 .bottom-description {
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
-    font-size: 16px;
 }
