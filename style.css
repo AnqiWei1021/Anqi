@@ -1153,7 +1153,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
 
-    margin-top: 30px;   /* ← 整个 2×2 小图组往下移动 30px */
+    margin-top: 10px;   /* ← 整个 2×2 小图组往下移动 30px */
 }
 
 .design-ref-grid {
