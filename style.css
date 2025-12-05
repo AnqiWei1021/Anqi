@@ -1074,69 +1074,82 @@ body {
     line-height: 1.7;
     max-width: 430px;
 }
-/* =============== 第四页 First Design =============== */
+/* =====================================
+   第四页：FIRST DESIGN Page
+===================================== */
 
-.first-design-page {
-    padding: 40px 40px 120px;
-    background: #fff;
+.design1-page {
+    background: white;
+    padding-bottom: 120px;
+    position: relative;
 }
 
-.first-design-container {
+/* 黑色背景区域 */
+.design1-container {
+    width: 100%;
+    background: black;
     margin-top: 40px;
-    background: #000;
-    padding: 40px;
+    padding: 40px 0;
+    position: relative;
+}
+
+/* 左侧竖排文字 */
+.vertical-title {
+    position: absolute;
+    left: 40px;
+    top: 80px;
+    color: white;
+    font-family: "Arial Black", sans-serif;
+    font-weight: 900;
+    line-height: 0.9em;
+    z-index: 20;
+}
+
+.vertical-title .word {
+    margin-bottom: 40px;
+}
+
+.vertical-title .first {
+    font-size: 90px;
+}
+
+.vertical-title .design {
+    font-size: 75px;
+}
+
+/* 图片区域 */
+.design1-images {
+    margin-left: 220px; /* 给竖排字留空间 */
     display: flex;
-    gap: 30px;
+    gap: 20px;
     align-items: flex-start;
 }
 
-/* 左侧竖排 FIRST DESIGN */
-.side-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    font-family: "Arial Black", sans-serif;
-    font-size: 60px;
-    font-weight: 900;
-    writing-mode: vertical-rl;
-    text-orientation: upright;
-    margin-right: 20px;
+.big-img {
+    height: 550px;
+    width: auto;
+    object-fit: cover;
 }
 
-/* 左侧大图 */
-.design-large-img {
-    width: 280px;
-    height: auto;
-    border: 12px solid black;
-}
-
-/* 中间大图 */
-.design-middle-img {
-    width: 260px;
-    height: auto;
-    border: 12px solid black;
-}
-
-/* 右侧小图 2×2 */
-.design-grid {
+/* 右侧四张小图 */
+.small-imgs {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
 }
 
-.design-grid img {
-    width: 160px;
-    height: 140px;
+.small-imgs img {
+    width: 180px;
+    height: 180px;
     object-fit: cover;
-    border: 12px solid black;
 }
 
 /* 底部说明文字 */
-.first-design-note {
-    width: 80%;
-    margin: 40px auto 0;
+.design1-note {
     text-align: center;
-    font-size: 14px;
-    color: #333;
+    margin-top: 40px;
+    font-size: 18px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
