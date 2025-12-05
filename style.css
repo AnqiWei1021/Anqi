@@ -1108,13 +1108,13 @@ body {
 .design-sidebar-text {
     color: #fff;
     font-family: "Arial Black", "Helvetica Neue", sans-serif;
-    font-size: 42px;
+    font-size: 50px;
     letter-spacing: 4px;
     white-space: nowrap;
     transform: rotate(-90deg); /单词旋转/
     transform-origin: center;
     display: block;
-     margin-top: 40px; /* 让 FIRST DESIGN 单独向下移动 */
+     margin-top: 72px; /* 让 FIRST DESIGN 单独向下移动 */
 }
 
 
