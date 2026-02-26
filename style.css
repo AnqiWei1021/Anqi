@@ -1184,3 +1184,13 @@ body {
     text-align: center;
     font-size: 25px;
 }
+/* 针对导航栏底部的调整 */
+.site-nav, header {
+    margin-bottom: 10px !important; /* 原本可能是 30px 或更高，调小它 */
+}
+
+/* 针对正文顶部的调整 */
+.wrapper, .post-content {
+    padding-top: 5px !important;
+    margin-top: 5px !important;
+}
