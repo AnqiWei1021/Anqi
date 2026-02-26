@@ -1,124 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DH 6012 submission</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- 顶部标题区 -->
-    <header class="site-header">
-        <h1 class="title">Anqi Wei, MA – Digital Arts & Humanities</h1>
-        <p class="subtitle">A student & creative thinker</p>
-
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="portfolio.html">Portfolio</a>
-
-            <div class="dropdown">
-                <span class="dropbtn">Writing ▼</span>
-                <div class="dropdown-content">
-                    <a href="6034.html">DH6034 — Humanities and New Technologies: Tools and Methodologies</a>
-                    <a href="6033.html">DH6033 – Conceptual Introduction to DAH</a>
-                    <a href="6013.html">DH6013 – Graduate Research and Generic Skills</a>
-                    <a href="6032.html">DH6032 – Communities of Practice in Digital Scholarship</a>
-                    <a href="6006.html">DH6006 – Teaching and Learning in DH</a>
-                    <a href="6012.html">DH6012 – Publishing & Editing</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    
-<head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DH6012 Submission</title>
 
   <style>
+    /* ===== Base ===== */
     body {
       font-family: "Helvetica Neue", Arial, sans-serif;
       background: #f5f6f8;
       margin: 0;
-      padding: 60px 20px;
+      padding: 0;
       color: #222;
+    }
+
+    /* ===== Header ===== */
+    .site-header {
       text-align: center;
+      padding: 40px 20px 10px;
     }
 
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      background: white;
-      padding: 50px 40px 60px;
-      border-radius: 14px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.08);
-    }
-
-    h1 {
-      font-size: 30px;
-      margin-bottom: 10px;
+    .title {
+      font-size: 28px;
+      margin-bottom: 6px;
       font-weight: 600;
     }
 
     .subtitle {
-      font-size: 16px;
       color: #666;
-      margin-bottom: 40px;
-      line-height: 1.5;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
 
-    .btn {
-      display: block;
-      width: 100%;
-      max-width: 320px;
-      margin: 16px auto;
-      padding: 14px 24px;
-      font-size: 16px;
+    /* ===== Navbar ===== */
+    .navbar {
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 12px 0;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      font-size: 15px;
+    }
+
+    .navbar a,
+    .dropbtn {
       text-decoration: none;
-      color: white;
-      background: #3f6fd8;
-      border-radius: 8px;
-      transition: 0.2s ease;
-    }
-
-    .btn:hover {
-      background: #2f5fcc;
-      transform: translateY(-1px);
-    }
-
-    .note {
-      margin-top: 35px;
-      font-size: 13px;
-      color: #888;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-
-    <!DOCTYPE html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>DH6012 Submission</title>
-
-  <style>
-    /* ===== 页面基础 ===== */
-    body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background: #f5f6f8;
-      margin: 0;
-      padding: 60px 20px;
       color: #222;
+      cursor: pointer;
     }
 
-    /* ===== 卡片容器 ===== */
+    .navbar a:hover,
+    .dropbtn:hover {
+      color: #4a6fdc;
+    }
+
+    /* ===== Dropdown ===== */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 260px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      border-radius: 8px;
+      padding: 8px 0;
+      z-index: 1;
+      text-align: left;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 14px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .dropdown-content a:hover {
+      background: #f2f4f8;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* ===== Card ===== */
     .submission-card {
       max-width: 720px;
-      margin: 60px auto;
+      margin: 80px auto;
       background: #ffffff;
       padding: 48px 42px 42px;
       border-radius: 14px;
@@ -126,7 +100,6 @@
       text-align: center;
     }
 
-    /* ===== 标题 ===== */
     .submission-card h1 {
       font-size: 28px;
       font-weight: 600;
@@ -134,33 +107,24 @@
       line-height: 1.35;
     }
 
-    /* ===== 说明文字 ===== */
     .desc {
       font-size: 16px;
       color: #555;
       line-height: 1.6;
-      margin-bottom: 12px;
+      margin-bottom: 28px;
       max-width: 560px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    /* ===== 学校信息 ===== */
-    .school {
-      font-size: 14px;
-      color: #8a8a8a;
-      margin-bottom: 34px;
-    }
-
-    /* ===== 按钮行 ===== */
     .btn-row {
       display: flex;
       justify-content: center;
       gap: 22px;
       flex-wrap: wrap;
+      margin-bottom: 24px;
     }
 
-    /* ===== 按钮样式 ===== */
     .btn {
       display: inline-block;
       padding: 14px 26px;
@@ -180,13 +144,16 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
 
-    /* ===== 手机适配 ===== */
-    @media (max-width: 520px) {
-      body {
-        padding: 40px 16px;
-      }
+    .school {
+      font-size: 14px;
+      color: #8a8a8a;
+      margin-top: 10px;
+    }
 
+    /* ===== Mobile ===== */
+    @media (max-width: 520px) {
       .submission-card {
+        margin: 50px 16px;
         padding: 36px 24px 32px;
       }
 
@@ -200,43 +167,60 @@
       }
     }
   </style>
-
 </head>
 
 <body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <h1 class="title">Anqi Wei, MA – Digital Arts & Humanities</h1>
+    <p class="subtitle">A student & creative thinker</p>
 
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+
+      <div class="dropdown">
+        <span class="dropbtn">Writing ▼</span>
+        <div class="dropdown-content">
+          <a href="6034.html">DH6034 — Humanities and New Technologies: Tools and Methodologies</a>
+          <a href="6033.html">DH6033 – Conceptual Introduction to DAH</a>
+          <a href="6013.html">DH6013 – Graduate Research and Generic Skills</a>
+          <a href="6032.html">DH6032 – Communities of Practice in Digital Scholarship</a>
+          <a href="6006.html">DH6006 – Teaching and Learning in DH</a>
+          <a href="6012.html">DH6012 – Publishing & Editing</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== Main Card ===== -->
   <div class="submission-card">
+    <h1>DH6012: Contemporary Practices in Publishing and Editing</h1>
 
-<h1>
-  DH6012: Contemporary Practices in Publishing and Editing
-</h1>
+    <p class="desc">
+      Final submission materials for the DH6012 module.
+      Please select the document you wish to view below.
+    </p>
 
-<p class="desc">
-  Final submission materials for the DH6012 module.
-  Please select the document you wish to view below.
-</p>
+    <div class="btn-row">
+      <a
+        class="btn"
+        href="https://anqiwei1021.github.io/Anqi/Anqi%20Wei-%20DH6012-%20Final%20Essay.pdf"
+        target="_blank"
+      >
+        View Final Essay
+      </a>
 
-<div class="btn-row">
+      <a
+        class="btn"
+        href="https://anqiwei1021.github.io/Anqi/Anqi%20Wei-%20Reflective%20Portfolio-1.pdf"
+        target="_blank"
+      >
+        View Individual Portfolio
+      </a>
+    </div>
 
-  <a class="btn"
-     href="https://anqiwei1021.github.io/Anqi/Anqi%20Wei-%20DH6012-%20Final%20Essay.pdf"
-     target="_blank">
-    View Final Essay
-  </a>
-
-  <a class="btn"
-     href="https://anqiwei1021.github.io/Anqi/Anqi%20Wei-%20Reflective%20Portfolio-1.pdf"
-     target="_blank">
-    View Individual Portfolio
-  </a>
-    
-    <p class="school">
-  University College Cork · Digital Humanities
-</p>
-
-</div>
-
+    <p class="school">University College Cork · Digital Humanities</p>
   </div>
-
 </body>
 </html>
