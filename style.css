@@ -1904,3 +1904,18 @@ html { scroll-behavior: smooth; }
     .left-btn { left: 16px; }
     .right-btn { right: 16px; }
 }
+
+.fig-cap {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fig-cap figcaption {
+    margin-top: 14px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
